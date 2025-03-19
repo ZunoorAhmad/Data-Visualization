@@ -1,0 +1,56 @@
+::ng-deep {
+    .confirm-Dialog {
+        .p-dialog-header {
+            padding: 16px 16px;
+        }
+
+        .p-dialog-header .p-dialog-title {
+            font-size: 1.5rem;
+        }
+
+        .p-dialog-footer {
+            padding: 1rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+
+        .p-dialog-footer button {
+            margin: 0;
+        }
+    }
+
+    .No-primary-btn {
+        gap: 6px;
+        padding: 6px 6px 6px 8px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        min-height: 36px;
+        letter-spacing: 1.25px;
+        height: 100%;
+        white-space: nowrap;
+
+        span {
+            padding: 4px 8px 4px 6px;
+        }
+    }
+}
+
+.spinner-container {
+    position: fixed;
+    top: 50%;
+    height: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    padding: 20px;
+    width: 100%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

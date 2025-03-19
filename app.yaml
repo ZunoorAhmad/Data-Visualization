@@ -1,0 +1,15 @@
+runtime: custom
+env: flex
+service: default
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 1
+  memory_gb: 1
+  disk_size_gb: 10
+readiness_check:
+  app_start_timeout_sec: 1200
+liveness_check:
+  initial_delay_sec: 1200
+runtime_config:
+  docker_image: gcr.io/vidvan-prototype/vidvan-prototype:v1

@@ -1,0 +1,1788 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    height: 100%;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    padding: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    width: 4px;
+    border-radius: 6px;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.logo {
+    background: linear-gradient(90deg, #D84315 0%, #FF7043 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 8px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.meeting-component-grid {
+    height: 78vh;
+    overflow: auto;
+}
+
+.break-word {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.student-card-details .p-card-body {
+    padding: 0 !important;
+}
+
+.student-card-details .p-card-content {
+    padding: 0 !important;
+}
+
+.student-card-details-image {
+    width: 100%;
+    height: 8rem;
+}
+
+.invalid-input.ng-dirty.ng-invalid {
+    border: .1rem solid #B71C1C;
+    background: #FFCDD2;
+}
+
+// .color-btn {
+//     color: #E64A19;
+// }
+
+.flex-1 {
+    width: 100%;
+}
+
+.natural-black {
+    color: #000 !important;
+}
+
+.natural-black2 {
+    color: rgb(0 0 0 / 60%) !important;
+}
+
+.secondary-btn {
+    border: 0.1rem solid var(--natural-silver, #EDF1FA);
+    color: #BF360C;
+
+    &.lg-btn {
+        height: 66px;
+        padding: 0.6rem 1.6rem;
+    }
+}
+
+.primary-btn {
+    gap: 0.6rem;
+    padding: 0.6rem 0.6rem 0.6rem 0.8rem;
+    background: linear-gradient(90deg, #d84315 0%, #ff7043 100%) !important;
+    border: none;
+    border-radius: 0.4rem;
+    color: #edf1fa !important;
+    font-size: 1.4rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    min-height: 3.6rem;
+    height: 100%;
+    white-space: nowrap;
+
+    span {
+        padding: 0.4rem 0.8rem 0.4rem 0.6rem;
+        color: #edf1fa !important;
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
+
+    &.lg-btn {
+        height: 6.6rem;
+        padding: 0.6rem 1.6rem;
+    }
+}
+
+
+.black-btn {
+    gap: .6rem;
+    padding: .6rem .6rem .6rem 8rem;
+    background: #353333 !important;
+    border: none;
+    border-radius: .4rem;
+    color: #edf1fa !important;
+    font-size: 1.4rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    min-height: 3.6rem;
+    height: 100%;
+    white-space: nowrap;
+
+    span {
+        padding: .4rem .8rem .4rem .6rem;
+        color: #edf1fa !important;
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
+
+    &.lg-btn {
+        height: 6.6rem;
+        padding: .6rem 1.6rem;
+    }
+}
+
+// .color-white {
+//     color: #ffffff;
+// }
+
+// .p-button-text {
+//     color: #bf360c;
+//     letter-spacing: 1.25px;
+
+//     &:hover {
+//         background: transparent;
+//     }
+// }
+
+.p-button.p-button-text:enabled:focus,
+.p-button.p-button-outlined:enabled:focus {
+    background: transparent;
+}
+
+// will help to customise the
+.size-10 {
+    font-size: 1rem;
+}
+
+.size-12 {
+    font-size: 1.2rem;
+}
+
+.size-14 {
+    font-size: 1.4rem;
+}
+
+.size-16 {
+    font-size: 1.6rem;
+}
+
+.we-4 {
+    font-weight: 400;
+}
+
+.we-5 {
+    font-weight: 500;
+}
+
+.we-6 {
+    font-weight: 600;
+}
+
+.we-7 {
+    font-weight: 700;
+}
+
+.color-gray {
+    color: #484848;
+}
+
+.color-gray2 {
+    color: #EDF1FA;
+}
+
+.color-gray3 {
+    color: #9E9E9E;
+}
+
+.color-gray4 {
+    color: #646464;
+}
+
+.color-gray5 {
+    color: #616161;
+}
+
+.color-gray6 {
+    color: #757575;
+}
+
+.color-primary {
+    color: #BF360C;
+}
+
+.color-primary2 {
+    color: #E64A19;
+}
+
+.color-primary3 {
+    color: #D84315;
+}
+
+.color-black {
+    color: black
+}
+
+.color-black2 {
+    color: #212121;
+}
+
+.color-black3 {
+    color: #424242;
+}
+
+.color-black4 {
+    color: #383838;
+}
+
+.color-danger {
+    color: #B71C1C;
+}
+
+.class-name-container {
+    background-color: white;
+    font-size: 2.4rem;
+    font-family: "Roboto";
+    border-radius: 1.6rem;
+    font-weight: 400;
+}
+
+.batch-header-container {
+    background-color: white;
+    border-radius: .4rem;
+}
+
+.batch {
+    border-bottom: .4rem #bf360c solid;
+    // margin-right: 10px;
+    color: #bf360c;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.not-batch {
+    margin-right: 1rem;
+    color: #424242;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.size-18 {
+    font-size: 1.8rem;
+}
+
+.size-20 {
+    font-size: 2rem;
+}
+
+.size-22 {
+    font-size: 2.2rem;
+}
+
+.size-24 {
+    font-size: 2.4rem;
+}
+
+.size-26 {
+    font-size: 2.6rem;
+}
+
+.size-28 {
+    font-size: 2.8rem;
+}
+
+.size-30 {
+    font-size: 3rem;
+}
+
+.size-32 {
+    font-size: 3.2rem;
+}
+
+.size-34 {
+    font-size: 3.4rem;
+}
+
+.size-36 {
+    font-size: 3.6rem;
+}
+
+.size-38 {
+    font-size: 3.8rem;
+}
+
+.size-40 {
+    font-size: 4rem;
+}
+
+.size-42 {
+    font-size: 4.2rem;
+}
+
+.size-48 {
+    font-size: 4.8rem;
+}
+
+.size-56 {
+    font-size: 5.6rem;
+}
+
+.size-60 {
+    font-size: 6rem;
+}
+
+.letter-spacing1 {
+    letter-spacing: 0.4px;
+}
+
+.letter-spacing6 {
+    letter-spacing: 0.1px;
+}
+
+.letter-spacing2 {
+    letter-spacing: 0.15px;
+}
+
+.letter-spacing3 {
+    letter-spacing: 0.25px;
+}
+
+.letter-spacing4 {
+    letter-spacing: 1.25px;
+}
+
+.letter-spacing7 {
+    letter-spacing: 1.5px;
+}
+
+.letter-spacing5 {
+    letter-spacing: 0.18px;
+}
+
+.letter-spacing7 {
+    letter-spacing: 1.5px;
+}
+
+.line-height-16 {
+    line-height: 1.6rem;
+}
+
+.line-height-18 {
+    line-height: 1.8rem;
+}
+
+.line-height-20 {
+    line-height: 2rem;
+}
+
+.line-height-24 {
+    line-height: 2.4rem;
+}
+
+.line-height-36 {
+    line-height: 3.6rem;
+}
+
+.line-height-56 {
+    line-height: 5.6rem;
+}
+
+.gap-4px {
+    gap: 0.4rem;
+}
+
+.gap-8px {
+    gap: 0.8rem;
+}
+
+.gap-10 {
+    gap: 1rem;
+}
+
+.gap-12 {
+    gap: 1.2rem;
+}
+
+.gap-16 {
+    gap: 1.6rem;
+}
+
+.gap-20 {
+    gap: 2rem;
+}
+
+.gap-24 {
+    gap: 2.4rem;
+}
+
+.gap-26 {
+    gap: 2.6rem;
+}
+
+.p-4px {
+    padding: 0.4rem;
+}
+
+.p-8px {
+    padding: 0.8rem !important;
+}
+
+.p-16px {
+    padding: 1.6rem;
+}
+
+.p-24px {
+    padding: 2.4rem;
+}
+.p-bell-icon{
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.times-icon,
+.pencil-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+.background-color {
+    background: #EDF1FA;
+}
+
+.background-primary {
+    background: #E64A19;
+}
+
+.span-style {
+    background: transparent;
+    border: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.p-tabview .p-tabview-nav {
+    border: none;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link {
+    padding: 1.2rem 1.6rem;
+    color: #424242;
+    font-weight: bold;
+    gap: .8rem;
+    border: none;
+
+    img {
+        filter: brightness(0) saturate(100%) invert(24%) sepia(0%) saturate(0%) hue-rotate(176deg) brightness(96%) contrast(88%);
+    }
+
+    span {
+        white-space: nowrap;
+    }
+}
+
+.p-tabview .p-tabview-nav .p-tabview-ink-bar {
+    display: none;
+}
+
+.p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+    color: #bf360c;
+    border-bottom: .2rem solid #bf360c;
+
+    img {
+        filter: brightness(0) saturate(100%) invert(25%) sepia(98%) saturate(1558%) hue-rotate(356deg) brightness(88%) contrast(96%);
+    }
+}
+
+.p-tabview-panels {
+    padding: 0;
+}
+
+.danger-text {
+    color: red;
+    font-size: 1rem;
+}
+
+/************* Quiz AI Modal ************/
+.quizAI-modal {
+    max-width: 106.5rem;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Quiz AI Modal ************/
+
+/************* Pending Students Modal ************/
+.pendingStudents-modal {
+    max-width: 71.6rem;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Pending Students Modal ************/
+
+/************* Pending Students Modal ************/
+.pendingInvitations-modal {
+    max-width: 92.5rem;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Pending Students Modal ************/
+
+/************* Cancel Confirmation Modal ************/
+.cancelConfirmation-modal {
+    max-width: 49%;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Cancel Confirmation Modal ************/
+
+/************* Skip Class Setup Modal ************/
+.skipClassSetup-modal {
+    max-width: 49%;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Student Detail Modal ************/
+
+/************* Student Detail Modal ************/
+
+.studentDetail-modal {
+    max-width: 69.5rem;
+    border-radius: 1.3rem !important;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Student Detail Modal ************/
+
+/************* Teacher Profile Modal ************/
+.teacherProfile-modal {
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Teacher Profile Modal ************/
+
+/************* Sign In Modal ************/
+.signin-modal {
+    width: 33.6% !important;
+    height: 47.8%;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Sign In Modal ************/
+
+/************* Sign In Modal ************/
+.studentInvite-modal {
+    max-width: 48rem;
+    height: 65rem;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Sign In Modal ************/
+
+/************* Sign In Modal ************/
+.questionResponce-modal {
+    max-width: 106.8rem;
+
+    .p-dialog-content {
+        padding: 2rem !important;
+    }
+}
+
+/************* Sign In Modal ************/
+
+/************* User Dashboard Sign Up Modal ************/
+.user-dashboard-signUp-modal {
+    max-width: 126rem;
+    border-radius: 0px !important;
+
+    .p-dialog-content {
+        padding: 6.5rem 5rem !important;
+    }
+}
+
+/************* User Dashboard Sign Up Modal ************/
+
+/************* Edit Specific Class Modal ************/
+.edit-specific-class-modal {
+    max-width: 60.7rem;
+    border-radius: .8rem !important;
+
+    .p-dialog-content {
+        padding: 1.6rem !important;
+    }
+}
+
+/************* Edit Specific Class Modal ************/
+
+/************* Description Subject P Autocomplete ************/
+.description-subject {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edf1fa;
+    border-radius: 0.4rem;
+    padding: 1.6rem;
+    height: 5.6rem;
+
+    p-autocomplete {
+        padding: 0;
+        width: 100%;
+        height: 5.6rem;
+        margin: 0;
+        border-width: 0;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    .pi-search {
+        margin: 0;
+        margin-right: 1.4rem;
+        position: unset;
+    }
+
+    .p-inputwrapper-filled {
+        background-color: transparent;
+    }
+
+    .filter-subject-class.p-inputwrapper {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        display: block;
+    }
+
+    .p-inputtext-lg .p-inputtext {
+        height: 100%;
+        padding: 0;
+        width: 100%;
+        background: transparent;
+        border: 0;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.15px;
+    }
+
+    .p-inputtext-lg .p-inputtext::placeholder {
+        color: #ABADB3;
+        line-height: 2.4rem;
+        letter-spacing: 0.15px;
+    }
+
+    .p-inputtext {
+        min-height: auto;
+    }
+
+    .p-inputtext:enabled:focus {
+        box-shadow: none;
+    }
+
+    button {
+        background: transparent;
+        border-left: 0.1rem solid #DDE0E9;
+        border-radius: 0;
+        padding: 0;
+        padding-left: 1.6rem;
+        margin-left: .8rem;
+        height: 2.4rem;
+        text-transform: uppercase;
+    }
+}
+
+.upload-btnField {
+    position: relative;
+
+    .p-inputtext {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        border-width: 0;
+        text-transform: none;
+        background: transparent;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.15px;
+        font-weight: 400;
+
+        // text-transform: uppercase;
+        &::placeholder {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            letter-spacing: 0.15px;
+        }
+
+        &:disabled {
+            opacity: 1;
+            cursor: no-drop;
+            font-size: 1.6re;
+            font-family: 'Roboto';
+            padding-right: 0;
+            padding: 0;
+            line-height: 2.4rem;
+            letter-spacing: 0.15px;
+        }
+    }
+
+    .upload-btn {
+        position: absolute;
+        right: 1.2rem;
+        height: 100%;
+        background: transparent;
+        padding: .6rem;
+        color: #bf360c;
+        text-transform: uppercase;
+        gap: 6px;
+        overflow: visible;
+        z-index: 1;
+        cursor: pointer;
+        border-left: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            height: 2.4rem;
+            width: .1rem;
+            background: #21212114;
+            transform: translate(0px, -50%);
+        }
+
+        input {
+            position: absolute;
+            inset: 0 0 0 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+/************* Description Subject P Autocomplete ************/
+
+/************* Vidvan Cards ************/
+.vidvan-card {
+    &.empty-room {
+        .p-card {
+            min-height: calc(100vh - 64px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h4 {
+                color: #616161;
+            }
+        }
+    }
+
+    .p-card {
+        box-shadow: none;
+        border-radius: 1.6rem;
+
+        .p-card-content {
+            padding: 0;
+        }
+
+        .p-card-header {
+            padding: 1.6rem;
+            padding-bottom: 0;
+
+            .card-title {
+                border-bottom: .1rem solid #edf1fa;
+            }
+        }
+
+        .p-card-body {
+            padding: 1.6rem;
+        }
+
+        .required {
+            color: #484848;
+        }
+    }
+}
+
+.p-button.p-button-outlined {
+    color: #BF360C;
+    border: .1rem solid #E64A19;
+    box-shadow: none;
+    text-transform: uppercase;
+    padding: 1rem 1.4rem;
+    height: 3.6rem;
+    border-radius: .4rem;
+
+    img {
+        width: auto !important;
+        height: auto !important;
+    }
+}
+
+.fields-area {
+    .p-calendar {
+        padding: 0rem 0rem !important;
+
+        .p-datepicker-icon {
+            top: 35%;
+            margin-top: 0;
+            right: 1.4rem;
+
+            .p-icon {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+    }
+
+    .p-inputtext,
+    .p-calendar {
+        border: none;
+        background: #edf1fa;
+        border-radius: 0.4rem;
+        width: calc(50% - .8rem);
+        color: #000;
+        outline: none;
+        box-shadow: none;
+        width: 100%;
+        height: 5.4rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.15px;
+        font-size: 1.6rem;
+        padding: 1.6rem 1.6rem;
+
+        &::placeholder {
+            color: #ABADB3;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem; // text-transform: lowercase;
+            letter-spacing: 0.15px;
+        }
+    }
+
+    p-dropdown {
+        width: calc(50% - .8rem);
+
+        .p-dropdown {
+            background: #edf1fa;
+            border: none;
+            width: 100%;
+            box-shadow: none;
+        }
+    }
+
+    p-multiselect {
+        width: calc(50% - .8rem);
+
+        .p-multiselect {
+            background: #edf1fa;
+            border: none;
+            width: 100%;
+            height: 5.4rem;
+            box-shadow: none;
+        }
+    }
+
+    .p-password .p-icon {
+        width: 1.4rem;
+        height: 1.4rem;
+    }
+
+    .button-field {
+        position: relative;
+
+        .p-inputtext {
+            width: 100%;
+            padding-right: 9.2rem;
+            // text-transform: uppercase;
+            text-transform: none;
+
+            &:disabled {
+                opacity: 1;
+                cursor: no-drop;
+                font-size: 1.4rem;
+                padding-right: 14.5rem;
+            }
+        }
+
+        .p-button {
+            position: absolute;
+            right: 1.2rem;
+            height: 100%;
+            background: transparent;
+            padding: .6rem;
+            color: #bf360c;
+            text-transform: uppercase;
+            gap: .6rem;
+            overflow: visible;
+            z-index: 1;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: -2rem;
+                height: 2.4rem;
+                width: .1rem;
+                background: #21212114;
+                transform: translate(0px, -50%);
+            }
+
+            input {
+                position: absolute;
+                inset: 0 0 0 0;
+                opacity: 0;
+                cursor: pointer;
+            }
+        }
+    }
+
+    p-editor {
+        width: 100%;
+
+        .p-editor-container .p-editor-toolbar {
+            border: none;
+            padding: .4rem 0;
+            margin-bottom: .8rem;
+        }
+
+        .p-editor-container .p-editor-content {
+            border: none;
+
+            .ql-editor {
+                padding: 1.6rem;
+                background: #edf1fa;
+                border-radius: .4rem;
+            }
+        }
+
+        .ql-snow.ql-toolbar button,
+        .ql-snow .ql-toolbar button,
+        .ql-snow .ql-color-picker,
+        .ql-snow .ql-icon-picker {
+            margin-right: 3.2rem;
+        }
+
+        .ql-snow.ql-toolbar button,
+        .ql-snow .ql-toolbar button {
+            height: 3rem;
+            padding: .6rem .5rem;
+            width: 3rem;
+        }
+
+        .ql-snow.ql-toolbar button svg,
+        .ql-snow .ql-toolbar button svg {
+            height: 1.8rem;
+            width: 1.8rem;
+        }
+
+        .ql-snow .ql-color-picker,
+        .ql-snow .ql-icon-picker {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        .ql-snow .ql-color-picker .ql-picker-label,
+        .ql-snow .ql-icon-picker .ql-picker-label {
+            padding: .6rem .5rem;
+        }
+
+        .ql-snow .ql-color-picker .ql-picker-label svg,
+        .ql-snow .ql-icon-picker .ql-picker-label svg {
+            right: 0;
+            width: 1.8rem;
+            height: 1.8rem;
+        }
+
+        .ql-toolbar.ql-snow .ql-formats {
+            margin-right: 0;
+        }
+
+        .ql-snow .ql-picker.ql-header {
+            width: 9.8rem;
+        }
+
+        .ql-snow .ql-picker.ql-font {
+            width: 10.8rem;
+        }
+
+        .ql-snow .ql-picker {
+            margin-right: 3.2rem;
+            font-size: 1.4rem;
+            height: 2.4rem;
+        }
+
+        .ql-snow .ql-picker-label::before {
+            line-height: 2.2rem;
+        }
+
+        .ql-snow .ql-picker:not(.ql-color-picker):not(.ql-icon-picker) svg {
+            width: 1.8rem;
+            margin-top: -.9rem;
+        }
+
+        .p-editor-container .ql-snow.ql-toolbar button.ql-active,
+        .p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active,
+        .p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected {
+            color: #edf1fa;
+            background: #bf360c;
+            border-radius: .5rem;
+        }
+
+        .p-editor-container .ql-snow.ql-toolbar button.ql-active .ql-stroke,
+        .p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-stroke,
+        .p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-stroke {
+            stroke: #edf1fa;
+        }
+
+        .p-editor-container .ql-snow.ql-toolbar button.ql-active .ql-fill,
+        .p-editor-container .ql-snow.ql-toolbar .ql-picker-label.ql-active .ql-fill,
+        .p-editor-container .ql-snow.ql-toolbar .ql-picker-item.ql-selected .ql-fill {
+            fill: #edf1fa;
+        }
+    }
+
+    p-tag {
+        border-left: .1rem solid #edf1fa;
+
+        &:only-child,
+        &:first-child {
+            border: 0;
+        }
+    }
+
+    .p-tag {
+        background: transparent;
+        color: #212121;
+
+        .text-base {
+            font-size: 1.8rem !important;
+            font-weight: normal;
+        }
+    }
+}
+
+.sum-card {
+    background: #ffffff;
+    border-radius: 1.6rem;
+
+    p-card {
+        flex: 1;
+    }
+
+    .p-card {
+        .p-card-header {
+            padding: 0;
+            padding-top: 1.6rem;
+        }
+    }
+
+    .p-card-body {
+        padding: 1.6rem 0 0;
+    }
+}
+
+/******* Vidvan Checkbox *******/
+
+.fields-area {
+    word-break: break-all;
+}
+
+.checkbox-area {
+    background: #edf1fa;
+    color: #000;
+    border-radius: .4rem;
+}
+
+.p-checkbox {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.p-checkbox .p-checkbox-box {
+    border-color: #000;
+    border: .2rem solid #757575;
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.p-checkbox .p-checkbox-box .p-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight,
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+    border-color: #bf360c;
+    background: #bf360c;
+}
+
+// Radio
+
+.p-radiobutton .p-radiobutton-box {
+    width: 2rem;
+    height: 2rem;
+}
+
+.p-radiobutton .p-radiobutton-box.p-highlight {
+    border: .2rem solid #BF360C;
+}
+
+.p-radiobutton .p-radiobutton-box .p-radiobutton-icon {
+    background: #BF360C;
+    width: .8rem;
+    height: .8rem;
+}
+
+
+.p-datepicker table td.p-datepicker-today>span {
+    border-color: #BF360C;
+}
+
+.p-datepicker table td>span.p-highlight {
+    background: #E64A19;
+    color: #fff;
+}
+
+.p-radiobutton .p-radiobutton-box {
+    border: .2rem solid #000;
+}
+
+/********** Table ************/
+
+
+/********* Age modal *********/
+.age-modal {
+    width: 27rem;
+
+    label {
+        color: #000;
+    }
+}
+
+/********* Age modal *********/
+
+// .striped-row {
+//   background-color: #EDF1FA;
+// }
+
+.p-datatable-table tr:nth-child(even) {
+    background-color: #edf1fa;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.p-datatable .p-button-text {
+    min-width: 1.8rem;
+}
+
+.no-border-table .p-datatable {
+    border: none;
+}
+
+.no-border-table .p-datatable .p-datatable-caption {
+    border: none;
+}
+
+.no-border-table .p-datatable .p-datatable-thead th {
+    border: .1rem solid #edf1fa;
+    border-right: none;
+    border-left: none;
+
+    &:first-child {
+        border-left: .1rem solid #edf1fa;
+        border-top-left-radius: .8rem;
+        border-bottom-left-radius: .8rem;
+    }
+
+    &:last-child {
+        border-right: .1rem solid #edf1fa;
+        border-top-right-radius: .8rem;
+        border-bottom-right-radius: .8rem;
+    }
+}
+
+.no-border-table .p-datatable .p-datatable-tbody td {
+    border: none;
+}
+
+/********** Teacher Calendar *********/
+// .custom-day-grid-month {
+//     .fc-theme-standard td {
+//         border: none !important;
+//     }
+// }
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border: none !important;
+}
+
+.fc-theme-standard td.fc-day {
+    padding: .8rem !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+    background: transparent !important;
+}
+
+.fc .fc-daygrid-day-frame {
+    min-height: 100%;
+    position: relative;
+    border: .1rem solid #EDF1FA;
+    border-radius: .5rem;
+    padding: 1.6rem;
+}
+
+.custom-day-grid-month .fc-daygrid-day-top {
+    color: #212121;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+    min-height: auto;
+}
+
+.fc-daygrid-event-dot {
+    display: none;
+}
+
+.fc .fc-daygrid-event-harness {
+    max-width: 100%;
+}
+
+.fc-event-title {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-weight: 500 !important;
+    color: #212121 !important;
+}
+
+.fc-event.fc-event-draggable {
+    margin: 0;
+    margin-top: 0.5rem !important;
+    padding: .4rem 3.4rem .4rem 1.2rem;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    max-width: 100%;
+    background-color: #EDF1FA !important;
+    border: .1rem solid #fff !important;
+    border-radius: 1.6rem;
+    position: relative;
+
+    &:hover {
+        background-color: #EDF1FA;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 1rem !important;
+        top: .1rem !important;
+        width: 2rem;
+        height: 2rem;
+        background: url("assets/images/pencil.svg") no-repeat;
+        inset: unset;
+        filter: brightness(0) saturate(100%) invert(8%) sepia(24%) saturate(0%) hue-rotate(213deg) brightness(87%) contrast(87%);
+    }
+
+    &::before {
+        display: none !important;
+    }
+}
+
+.fc .fc-timegrid-col.fc-day-today {
+    background: transparent !important;
+}
+
+.fc-multiMonthYear-view {
+    border: none !important;
+    gap: 1.6rem;
+}
+
+.fc .fc-toolbar.fc-footer-toolbar {
+    margin: 0;
+    padding: 0.5rem;
+    border: .1rem solid #EDF1FA;
+    border-radius: .5rem;
+
+    .fc-customFooter-button {
+        background: transparent;
+        border: .1rem solid #EDF1FA;
+        border-radius: .4rem;
+        color: #BF360C;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 500;
+        letter-spacing: 1.25px;
+        line-height: 1.4rem;
+        padding: 1rem 4.2rem 1rem 1.4rem;
+        position: relative;
+        box-shadow: none !important;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            background: url('assets/images/dropdown.svg') no-repeat;
+            width: 1.6rem;
+            height: 1.6rem;
+            background-position: center;
+            transform: translateY(-50%);
+            filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(2301%) hue-rotate(3deg) brightness(102%) contrast(91%);
+        }
+    }
+
+    .fc-toolbar-chunk {
+
+        &:last-child {
+            display: flex;
+            align-items: center;
+            gap: 3.2rem;
+
+            .fc-button-primary {
+                background: transparent;
+                color: #212121;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2.4rem;
+                height: 2.4rem;
+                border: none;
+                font-size: 1.4rem;
+                box-shadow: none;
+            }
+        }
+
+        .fc-toolbar-title {
+            font-size: 1.6rem;
+            font-weight: normal;
+        }
+    }
+}
+
+.fc .fc-view-harness {
+    margin-bottom: 1.6rem;
+}
+
+.p-overlay.calendar-dropdown {
+    box-shadow: none !important;
+
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+
+.p-overlay.calendar-dropdown .p-overlaypanel-content {
+    border-radius: 1rem;
+    background: #EDF1FA;
+    border: none;
+    width: 30rem;
+}
+
+.calendar-dropdown .p-listbox {
+    background: #EDF1FA;
+    border: none;
+}
+
+.calendar-table-dropdown {
+    background: #EDF1FA;
+    box-shadow: none !important;
+    border: .1rem solid #9E9E9E;
+    min-width: 23.2rem;
+
+    hr {
+        display: block;
+        width: 100%;
+        margin: 1.6rem 0;
+        background: #000;
+        opacity: 0.1;
+        height: .1rem;
+    }
+
+    .p-card-body,
+    .p-card .p-card-content {
+        padding: 0;
+    }
+
+    &::after,
+    &::before {
+        display: none;
+    }
+}
+
+.p-listbox .p-listbox-list .p-listbox-item.p-highlight {
+    color: #BF360C;
+}
+
+/********** Teacher Calendar *********/
+
+/*********** Paginator **********/
+.site-paginator {
+    border: .1rem solid #edf1fa;
+    border-radius: .8rem;
+    padding: .8rem 1.6rem;
+}
+
+.p-dropdown {
+    box-shadow: none;
+}
+
+.br-1 {
+    border-radius: 1rem;
+}
+
+.site-paginator {
+    .p-dropdown {
+        border: .1rem solid #edf1fa;
+        border-radius: .4rem;
+        padding: .6rem .8rem;
+    }
+
+    .p-inputtext {
+        padding: .4rem .6rem;
+        line-height: 1.4rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: #bf360c;
+    }
+
+    .p-dropdown .p-dropdown-trigger {
+        width: 2.4rem;
+
+        .p-icon {
+            width: 1.2rem;
+            color: #bf360c;
+        }
+    }
+
+    .select-rows {
+        span {
+            letter-spacing: 0.15px;
+        }
+    }
+
+    .p-paginator {
+        padding: 0;
+        gap: 1.6rem;
+
+        .p-paginator-current {
+            color: #212121;
+            height: auto;
+            padding: 0;
+            margin: 0;
+            margin-right: 1.6rem;
+        }
+
+        .p-paginator-first,
+        .p-paginator-prev,
+        .p-paginator-next,
+        .p-paginator-last {
+            height: 2.4rem;
+            min-width: 2.4rem;
+            margin: 0;
+            color: #212121;
+        }
+    }
+}
+
+.uploaded-item {
+    background: #ffffff;
+    padding: .4rem;
+    border-radius: .4rem;
+
+    .img {
+        width: 4rem;
+        border-radius: .4rem;
+        min-height: 2.4rem;
+        height: 2.4rem;
+        object-fit: cover;
+    }
+}
+
+.p-overlay {
+    // top: 0 !important;
+
+    .p-dropdown-items-wrapper {
+        background: #edf1fa;
+        border: .1rem solid #000;
+        border-radius: .4rem;
+    }
+
+    .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight.p-focus {
+        background: transparent;
+        color: #000;
+        font-weight: 700;
+    }
+
+    .p-dropdown-panel .p-dropdown-items p-dropdownitem {
+
+        &:first-child {
+
+            li {
+                padding: 1.6rem;
+            }
+        }
+
+        li {
+            padding: 0.5rem 1.6rem;
+        }
+    }
+
+    .p-dropdown-panel {
+        box-shadow: none !important;
+    }
+}
+
+/*********** Vidvan Dialog **************/
+
+.p-dialog {
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.p-dialog .p-dialog-content {
+    padding: 3.2rem;
+}
+
+.p-dialog .p-dialog-header {
+    border-bottom: .1rem solid #edf1fa;
+    padding: 3.2rem 3.2rem 1.5rem;
+}
+
+.p-dialog .p-dialog-header .p-dialog-title {
+    font-size: 3.4rem;
+}
+
+.p-overlaypanel-content {
+    padding: 0;
+
+    p,
+    label {
+        color: #000;
+        line-height: 1.5;
+    }
+
+    .p-chip {
+        padding: .8rem 1.2rem;
+        border-radius: 1.6rem;
+        font-size: 1.2rem;
+        color: #212121;
+        line-height: 1;
+        background: #EDF1FA;
+
+        .p-chip-text {
+            margin: 0;
+        }
+    }
+
+    .p-slider {
+        background: #E64A19;
+    }
+
+    .p-slider-handle {
+        background: #fff;
+        border: .2rem solid #E64A19;
+    }
+}
+
+
+/********* Vidvan Card p-card-head *********/
+
+.vidvan-card.p-card-head {
+    .p-card-header {
+
+        .p-card-head-bb1 {
+            border-bottom: .1rem solid #EDF1FA;
+
+            button {
+                background: transparent;
+                color: #BF360C;
+                text-transform: uppercase;
+                font-weight: 500;
+                letter-spacing: 1.25px;
+                font-size: 1.4rem;
+                padding: 1rem .8rem;
+                border: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .sm\:flex-row {
+
+        p-button {
+            width: 100%;
+            display: block;
+        }
+
+        .p-button {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .primary-btn.lg-btn,
+    .secondary-btn.lg-btn {
+        height: 58px;
+        padding: 6px 16px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .primary-btn span,
+    .secondary-btn span,
+    .p-button-label {
+        flex: 0 0 auto;
+    }
+}
+
+
+/******** OTP Dialog ***********/
+.otp-inputs {
+
+    .ng-otp-input-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+        justify-content: space-between;
+        width: 100%;
+
+        .otp-input {
+            flex: 1;
+            width: 100%;
+            height: 6.8rem;
+            border: .1rem solid #EDF1FA;
+            border-radius: .6rem;
+            margin: 0;
+        }
+    }
+
+}
+
+/******** OTP Dialog ***********/
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .p-dialog {
+        width: 95vw !important;
+    }
+
+    .p-dialog .p-dialog-content {
+        padding: 16px;
+    }
+}
+
+@media screen and (min-width:1800px) and (max-width:2000px) {
+
+    html {
+        font-size: 13.4px;
+    }
+
+}
+
+@media screen and (min-width:2001px) and (max-width:2250px) {
+
+    html {
+        font-size: 14.6px;
+    }
+
+}
+
+@media screen and (min-width:2251px) and (max-width:2500px) {
+
+    html {
+        font-size: 15.8px;
+    }
+
+}
+
+@media screen and (min-width:2501px) and (max-width:2799px) {
+
+    html {
+        font-size: 17.8px;
+    }
+
+}
+
+@media screen and (min-width:2800px) and (max-width:2950px) {
+
+    html {
+        font-size: 20px;
+    }
+
+}
+
+// .btn-google {
+
+//     iframe {
+
+//         .nsm7Bb-HzV7m-LgbsSe {
+//             min-width: 254px !important;
+//             position: absolute !important;
+//             inset: 0 0 0 0 !important;
+//             height: 66px !important;
+//         }
+//     }
+// }

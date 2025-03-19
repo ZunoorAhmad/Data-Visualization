@@ -1,0 +1,13 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "doubleQuote": true,
+    "semi": true,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "trailingComma": "es5",
+    "bracketSameLine": true,
+    "printWidth": 120,
+    "endOfLine": "auto",
+    "camelCase": true
+}
