@@ -1,1 +1,1191 @@
-<p>home works!</p>
+<header>
+    <div class="logo-burger">
+        <a href="https://u24.gov.ua/" target="_blank" class="support-ukraine">
+            <img src="https://img.thingsboard.io/support-ukraine-banner.webp" alt="Stand with Ukraine flag" width="48"
+                height="31">
+        </a>
+        <a href="/" class="logo" aria-label="Link to homepage"></a>
+        <button onclick="Burger()" class="burger" aria-label="Burger menu"></button>
+        <div id="githubButtonContainer" style="width: 110px;">
+            <span></span>
+        </div>
+    </div>
+    <nav class="head-menu">
+        <ul>
+            <li class="nav-products" data-submenu-id="nav-products">
+                <span class="main-menu-link" onclick="listburg('nav-products')">Products</span>
+            </li>
+            <li class="nav-services" data-submenu-id="nav-services">
+                <span class="main-menu-link" onclick="listburg('nav-services')">Services</span>
+            </li>
+            <li class="nav-cases" data-submenu-id="nav-cases">
+                <a class="main-menu-link" id="use-cases-link" href="/iot-use-cases/" style="cursor: pointer;">Use
+                    Cases</a>
+            </li>
+            <li class="nav-customers" data-submenu-id="nav-customers">
+                <span class="main-menu-link" onclick="listburg('nav-customers')">Customers</span>
+            </li>
+            <li class="nav-company" data-submenu-id="nav-company">
+                <span class="main-menu-link" onclick="listburg('nav-company')">Company</span>
+            </li>
+            <li class="nav-partners" data-submenu-id="nav-partners">
+                <span class="main-menu-link" onclick="listburg('nav-partners')">Partners</span>
+            </li>
+            <li class="nav-docs" data-submenu-id="nav-docs">
+                <span class="main-menu-link" onclick="listburg('nav-docs')">Docs</span>
+            </li>
+            <li class="nav-blog">
+                <a class="main-menu-link" id="blog-link" href="/blog/" style="cursor: pointer;">Blog</a>
+            </li>
+        </ul>
+        <div class="indicator">
+            <div class="head-arrow"></div>
+            <div class="line"></div>
+            <div class="sub-background"></div>
+        </div>
+
+        <div class="sub-menu-container" style="display: block;">
+
+            <div id="nav-products" class="centered-sub" style="display: block;">
+                <ul class="sub-menu products">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <p class="group-name">IoT platforms</p>
+                            <a class="com-lnk" href="/">
+                                <img src="https://img.thingsboard.io/thingsboard-cm-icon.svg"
+                                    alt="Community Edition icon" width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Community Edition</span>
+                                    <p>Open-source platform</p>
+                                </div>
+                            </a>
+                            <a class="prof-lnk" href="/products/thingsboard-pe/">
+                                <img src="https://img.thingsboard.io/thingsboard-p-icon.svg"
+                                    alt="Professional Edition icon" width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Professional Edition</span>
+                                    <p>Advanced IoT platform</p>
+                                </div>
+                            </a>
+                            <a class="cloud-lnk" href="/products/paas/">
+                                <img src="https://img.thingsboard.io/thingsboard-c-icon.svg" alt="Cloud icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Cloud</span>
+                                    <p>Platform as a service</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <p class="group-name">Product ecosystem</p>
+                            <a class="edge-lnk" href="/products/thingsboard-edge/">
+                                <img src="https://img.thingsboard.io/thingsboard-e-icon.svg" alt="Edge icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Edge</span>
+                                    <p>Edge computing</p>
+                                </div>
+                            </a>
+                            <a class="gateway-lnk" href="/docs/iot-gateway/what-is-iot-gateway/">
+                                <img src="https://img.thingsboard.io/gateway-icon.svg" alt="IoT Gateway icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">IoT Gateway</span>
+                                    <p>Connect legacy protocols</p>
+                                </div>
+                            </a>
+                            <a class="mqtt-broker-lnk" href="/products/mqtt-broker/">
+                                <img src="https://img.thingsboard.io/tbmq-icon.svg" alt="MQTT Broker icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">TBMQ</span>
+                                    <p>Scalable MQTT broker</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <p class="group-name">&nbsp;</p>
+                            <a class="trendz-lnk" href="/products/trendz/">
+                                <img src="https://img.thingsboard.io/trendz-icon.svg" alt="Trendz Analytics icon"
+                                    width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Trendz Analytics</span>
+                                    <p>Data analytics and Prediction</p>
+                                </div>
+                            </a>
+                            <a class="mobile-lnk" href="/products/mobile/">
+                                <img src="https://img.thingsboard.io/tb-mobile-icon.svg" alt="Device icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Mobile Application</span>
+                                    <p>IoT mobile product</p>
+                                </div>
+                            </a>
+                            <a class="mobile-pe-lnk" href="/products/mobile-pe/">
+                                <img src="https://img.thingsboard.io/tb-pe-mobile-icon.svg"
+                                    alt="PE Mobile Application icon" width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">PE Mobile Application</span>
+                                    <p>Advanced IoT mobile product</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-services" class="centered-sub" style="display: block;">
+                <ul class="sub-menu services">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <a href="/docs/services/development-services/">
+                                <img src="https://img.thingsboard.io/development-services.svg"
+                                    alt="Development services icon" width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Development services</span>
+                                    <p>Customization and complete IoT Solutions development</p>
+                                </div>
+                            </a>
+                            <a href="/docs/services/support/">
+                                <img src="https://img.thingsboard.io/support-icon.svg" alt="Support icon" width="34"
+                                    height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Support</span>
+                                    <p>Support packages</p>
+                                </div>
+                            </a>
+                            <a href="/docs/services/trainings/">
+                                <img src="https://img.thingsboard.io/train-icon.svg" alt="Trainings icon" width="34"
+                                    height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Trainings</span>
+                                    <p>ThingsBoard education courses</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a href="/iot-solutions/">
+                                <img src="https://img.thingsboard.io/iot-solutions.svg" alt="IoT solutions icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">IoT Solutions</span>
+                                    <p>Overview of IoT Solutions and Applications</p>
+                                </div>
+                            </a>
+                            <a href="/device-management/">
+                                <img src="https://img.thingsboard.io/device-management.svg" alt="Device management icon"
+                                    width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Device management</span>
+                                    <p>Streamline Your IoT Device Operations</p>
+                                </div>
+                            </a>
+                            <a href="/monitoring-dashboard/">
+                                <img src="https://img.thingsboard.io/monitoring-dashboard.svg"
+                                    alt="Monitoring dashboard icon" width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Monitoring dashboard</span>
+                                    <p>Visualizing IoT Data on Live Dashboards</p>
+                                </div>
+                            </a>
+                            <a href="/asset-management">
+                                <img src="https://img.thingsboard.io/asset-management.svg" alt="Asset management icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Asset Management</span>
+                                    <p>IoT Asset Tracking and inventory management</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-cases" class="centered-sub" style="display: block;">
+                <ul class="sub-menu cases">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <a href="/smart-energy/">
+                                <img src="https://img.thingsboard.io/case-eng-icon.svg" alt="Smart Energy icon"
+                                    width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Energy</span>
+                                    <p>Energy monitoring and efficiency analysis</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/scada/">
+                                <img src="https://img.thingsboard.io/case-scada-icon.svg" alt="SCADA icon" width="34"
+                                    height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">SCADA</span>
+                                    <p>Control, monitor and analise industrial devices and processes</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/environment-monitoring/">
+                                <img src="https://img.thingsboard.io/case-env-icon.svg"
+                                    alt="Environment Monitoring icon" width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Environment Monitoring</span>
+                                    <p>Monitor and analyze indoor and outdoor environments</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/smart-office/">
+                                <img src="https://img.thingsboard.io/case-off-icon.svg" alt="Smart Office icon"
+                                    width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Office</span>
+                                    <p>Increase productivity and optimize resource consumption</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/water-metering/">
+                                <img src="https://img.thingsboard.io/case-wat-icon.svg" alt="Water Metering icon"
+                                    width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Water Metering</span>
+                                    <p>Water consumption analysis and fraud detection</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/smart-retail/">
+                                <img src="https://img.thingsboard.io/case-ret-icon.svg" alt="Smart Retail icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Retail</span>
+                                    <p>Control quality of food storage, indoor environment and safety</p>
+                                </div>
+                            </a>
+                            <a href="/smart-farming/">
+                                <img src="https://img.thingsboard.io/case-fam-icon.svg" alt="Smart Farming icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Farming</span>
+                                    <p>Remote soil, products and equipment monitoring</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a href="/fleet-tracking/">
+                                <img src="https://img.thingsboard.io/case-trk-icon.svg" alt="Fleet Tracking icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Fleet Tracking</span>
+                                    <p>Fleet tracking and fleet management</p>
+                                </div>
+                            </a>
+                            <a href="/smart-metering/">
+                                <img src="https://img.thingsboard.io/case-met-icon.svg" alt="Smart Metering icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Metering</span>
+                                    <p>Collection, analysis and visualization of data from meters</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/health-care/">
+                                <img src="https://img.thingsboard.io/case-health-care-icon.svg" alt="Health Care icon"
+                                    width="34" height="44" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Health Care</span>
+                                    <p>Smart assisted living solution</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/air-quality-monitoring/">
+                                <img src="https://img.thingsboard.io/case-aq-icon.svg" alt="Air Quality Monitoring icon"
+                                    width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Air Quality Monitoring</span>
+                                    <p>Monitor outdoor air quality using a wide range of sensors</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/smart-irrigation/">
+                                <img src="https://img.thingsboard.io/smart-irrigation.svg" alt="Smart Irrigation icon"
+                                    width="32" height="32" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Irrigation</span>
+                                    <p>Soil moisture monitoring and irrigation control</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/waste-management/">
+                                <img src="https://img.thingsboard.io/case-waste-icon.svg" alt="Waste Management icon"
+                                    width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Waste Management</span>
+                                    <p>Real-time waste management for streamlined processes</p>
+                                </div>
+                            </a>
+                            <a href="/use-cases/tank-level-monitoring/">
+                                <img src="https://img.thingsboard.io/case-level-icon.svg"
+                                    alt="Tank Level Monitoring icon" width="34" height="34" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Tank Level Monitoring</span>
+                                    <p>Monitor the location of fuel tanks and control the level of remaining fuel in
+                                        them</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-customers" class="centered-sub" style="display: block;">
+                <ul class="sub-menu customers">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <a class="small-link" href="/industries/smart-energy/">
+                                <img src="https://img.thingsboard.io/se-s-icon.svg" alt="Smart Energy icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Energy</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/industries/agriculture/">
+                                <img src="https://img.thingsboard.io/agr-s-icon.svg" alt="Agriculture icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Agriculture</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/industries/telecom/">
+                                <img src="https://img.thingsboard.io/tel-s-icon.svg" alt="Telecom icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Telecom</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/industries/warehouse-monitoring/">
+                                <img src="https://img.thingsboard.io/sb-s-icon.svg" alt="Warehouse Monitoring icon"
+                                    width="24" height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Warehouse Monitoring</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a class="small-link" href="/industries/smart-city/">
+                                <img src="https://img.thingsboard.io/sc-s-icon.svg" alt="Smart City icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart City</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/industries/smart-buildings/">
+                                <img src="https://img.thingsboard.io/sb-s-icon.svg" alt="Smart Buildings icon"
+                                    width="24" height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Smart Buildings</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/industries/industry40/">
+                                <img src="https://img.thingsboard.io/in-s-icon.svg" alt="Industry 4.0 icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Industry 4.0</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-company" class="centered-sub" style="display: block;">
+                <ul class="sub-menu about">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <a class="small-link" href="/company/">
+                                <img src="https://img.thingsboard.io/about-s-icon.svg" alt="About Our Company icon"
+                                    width="24" height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Our Company</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/docs/contact-us/">
+                                <img src="https://img.thingsboard.io/contact-s-icon.svg" alt="Contact Us icon"
+                                    width="24" height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Contact Us</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/careers/">
+                                <img src="https://img.thingsboard.io/careers-s-icon.svg" alt="Careers icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Careers</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <a class="small-link" href="/mediakit/">
+                                <img src="https://img.thingsboard.io/media-s-icon.svg" alt="Media Kit icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Media Kit</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/blog/">
+                                <img src="https://img.thingsboard.io/blog-s-icon.svg" alt="Blog icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Blog</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-partners" class="centered-sub" style="display: block;">
+                <ul class="sub-menu about">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <a class="small-link" href="/partners/hardware/">
+                                <img src="https://img.thingsboard.io/hard-s-icon.svg" alt="Hardware partners icon"
+                                    width="24" height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Hardware partners</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/partners/distributors/">
+                                <img src="https://img.thingsboard.io/dis-s-icon.svg" alt="Distributors icon" width="24"
+                                    height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Distributors</span>
+                                </div>
+                            </a>
+                            <a class="small-link" href="/partners/marketplace/">
+                                <img src="https://img.thingsboard.io/marketplace-s-icon.svg" alt="Marketplace icon"
+                                    width="24" height="24" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Marketplace</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div id="nav-docs" class="centered-sub" style="display: block;">
+                <ul class="sub-menu products">
+                    <li class="sub-groups">
+                        <div class="group">
+                            <p class="group-name">IoT platforms</p>
+                            <a class="com-lnk" href="/docs/">
+                                <img src="https://img.thingsboard.io/thingsboard-cm-icon.svg"
+                                    alt="Community Edition icon" width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Community Edition</span>
+                                    <p>Open-source platform</p>
+                                </div>
+                            </a>
+                            <a class="prof-lnk" href="/docs/pe/">
+                                <img src="https://img.thingsboard.io/thingsboard-p-icon.svg"
+                                    alt="Professional Edition icon" width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Professional Edition</span>
+                                    <p>Advanced IoT platform</p>
+                                </div>
+                            </a>
+                            <a id="cloud-documentation" class="cloud-lnk" href="/docs/paas/">
+                                <img src="https://img.thingsboard.io/thingsboard-c-icon.svg" alt="Cloud icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Cloud</span>
+                                    <p>Platform as a service</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <p class="group-name">Product ecosystem</p>
+                            <a class="edge-lnk" href="/docs/edge/">
+                                <img src="https://img.thingsboard.io/thingsboard-e-icon.svg" alt="Edge icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Edge</span>
+                                    <p>Edge computing</p>
+                                </div>
+                            </a>
+                            <a class="gateway-lnk" href="/docs/iot-gateway/">
+                                <img src="https://img.thingsboard.io/gateway-icon.svg" alt="IoT Gateway icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">IoT Gateway</span>
+                                    <p>Connect legacy protocols</p>
+                                </div>
+                            </a>
+                            <a class="mqtt-broker-lnk" href="/docs/mqtt-broker/">
+                                <img src="https://img.thingsboard.io/tbmq-icon.svg" alt="MQTT Broker icon" width="54"
+                                    height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">TBMQ</span>
+                                    <p>Scalable MQTT broker</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="group">
+                            <p class="group-name">&nbsp;</p>
+                            <a class="trendz-lnk" href="/docs/trendz/">
+                                <img src="https://img.thingsboard.io/trendz-icon.svg" alt="Trendz Analytics icon"
+                                    width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Trendz Analytics</span>
+                                    <p>Data analytics and Prediction</p>
+                                </div>
+                            </a>
+                            <a class="mobile-lnk" href="/docs/mobile/">
+                                <img src="https://img.thingsboard.io/tb-mobile-icon.svg" alt="Device icon icon"
+                                    width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">Mobile Application</span>
+                                    <p>IoT mobile product</p>
+                                </div>
+                            </a>
+                            <a class="mobile-pe-lnk" href="/docs/pe/mobile/">
+                                <img src="https://img.thingsboard.io/tb-pe-mobile-icon.svg"
+                                    alt="PE Mobile Application icon" width="54" height="54" loading="lazy">
+                                <div class="sub-text">
+                                    <span class="item-heading">PE Mobile Application</span>
+                                    <p>Advanced IoT mobile product</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="head-buttons">
+        <a id="Menu_TryItNow" href="/installations/" class="n-button try gtm_button">Try it now</a>
+        <a id="Menu_Pricing" href="/pricing/" class="n-button price gtm_button">Pricing</a>
+    </div>
+</header>
+<main>
+    <section id="hero" class="light-text" data-vide-bg="mp4: https://video.thingsboard.io/tb-cover2.mp4,
+											  webm: https://video.thingsboard.io/tb-cover2.webm,
+											  ogv: https://video.thingsboard.io/tb-cover2.ogv,
+											  poster: https://img.thingsboard.io/tb-cover.webp"
+        data-vide-options="bgColor: #000000, loop: true, muted: true, posterType: webp">
+        <div
+            style="position: absolute; z-index: -1; inset: 0px; overflow: hidden; background-size: cover; background-color: rgb(0, 0, 0); background-repeat: no-repeat; background-position: 50% 50%; background-image: none;">
+            <video autoplay="" loop="" preload="auto" muted=""
+                style="margin: auto; position: absolute; z-index: -1; top: 50%; left: 50%; transform: translate(-50%, -50%); visibility: visible; opacity: 1; width: auto; height: 851px;"
+                __idm_id__="737281">
+                <source src="https://video.thingsboard.io/tb-cover2.mp4" type="video/mp4">
+                <source src="https://video.thingsboard.io/tb-cover2.webm" type="video/webm">
+                <source src="https://video.thingsboard.io/tb-cover2.ogv" type="video/ogg">
+            </video>
+        </div>
+        <div class="video-cover"></div>
+
+        <div class="achievement">
+            <a href="/blog/top-supplier-retail-2024-2/">
+                <img class="achieve" src="https://img.thingsboard.io/feature-logo/top-supplier-retail-2024.webp"
+                    alt="Top supplier retail 2024" width="110" height="160">
+            </a>
+        </div>
+
+        <div id="hero-content" class="">
+            <span class="header-animation tb-title">ThingsBoard</span>
+            <span class="header-animation tb-title">Open-source IoT Platform</span>
+            <h4 class="header-animation tb-sub-title">Device management, data collection, processing and visualization
+                for your IoT solution</h4>
+            <div class="header-animation">
+                <a href="#intro" class="button learn-tb">Learn More</a>
+            </div>
+            <div class="tb-arrow">
+                <a href="#intro" aria-label="Link to main heading"><i class="pi pi-angle-down"
+                        style="font-size: 2rem"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="overflow">
+        <section id="tb-customers" class="ce">
+            <div class="tb-customers-content">
+                <a href="https://www.prosegur.com/">
+                    <object data="https://img.thingsboard.io/customers/clear/prosegur.svg" aria-label=""></object>
+                </a>
+                <a href="https://www.engie.sk/en/kontakt">
+                    <object data="https://img.thingsboard.io/customers/clear/engie.svg" aria-label=""></object>
+                </a>
+                <a href="/industries/telecom/#tmobile">
+                    <object data="https://img.thingsboard.io/customers/clear/t-mobile.svg" aria-label=""></object>
+                </a>
+                <a href="https://www.intel.com/">
+                    <object data="https://img.thingsboard.io/customers/clear/intel.svg" aria-label=""></object>
+                </a>
+                <a href="https://gruppe.schwarz/en">
+                    <object data="https://img.thingsboard.io/customers/clear/schwarz-gruppe.svg" aria-label=""></object>
+                </a>
+                <a href="https://www.bosch.com/">
+                    <object data="https://img.thingsboard.io/customers/clear/bosch.svg" aria-label=""></object>
+                </a>
+                <a href="/industries/telecom/#tektelic">
+                    <object data="https://img.thingsboard.io/customers/clear/tektelic.svg" aria-label=""></object>
+                </a>
+            </div>
+        </section>
+
+        <section id="intro">
+            <div class="main-div">
+                <h1><a href="docs/getting-started-guides/what-is-thingsboard/">ThingsBoard</a> is an open-source IoT
+                    platform for data collection, processing, visualization, and device management</h1>
+                <h2 class="second in-the-past-h1">It enables device connectivity via industry standard IoT protocols -
+                    MQTT, CoAP and HTTP and supports both cloud and on-premises deployments. ThingsBoard combines
+                    scalability, fault-tolerance and performance so you will never lose your data.</h2>
+            </div>
+        </section>
+
+        <section id="manage">
+            <div class="main-div">
+                <div id="features-top">
+                    <div class="background">
+                        <div class="main1"></div>
+                        <div class="small1"></div>
+                        <div class="small2"></div>
+                        <div class="small3"></div>
+                        <div class="small4"></div>
+                    </div>
+                    <div class="blocks">
+                        <div class="feature-des"><span class="phrase-heading">Provision and manage devices and
+                                assets</span>
+                            <p>Provision, monitor and control your IoT entities in secure way using rich server-side
+                                APIs. Define relations between your devices, assets, customers or any other entities.
+                            </p>
+                            <a class="read-more-button" href="/docs/user-guide/entities-and-relations/">Read more about
+                                entities and relations
+                                <i class="fas fa-chevron-right arrow first"></i>
+                                <i class="fas fa-chevron-right arrow second"></i>
+                                <i class="fas fa-chevron-right arrow third"></i>
+                            </a>
+                        </div>
+                        <div class="manage">
+                            <img class="device-list" src="https://img.thingsboard.io/device-list.svg"
+                                alt="Device list with checkboxes" width="626" height="335" loading="lazy">
+                            <img class="device-manage" src="https://img.thingsboard.io/device-manage.svg"
+                                alt="Device managing panel" width="543" height="509" loading="lazy">
+                        </div>
+                    </div>
+                    <div class="blocks vis">
+                        <div class="visualize">
+                            <img class="vis1" src="https://img.thingsboard.io/visualize1.svg" alt="Linear chart"
+                                width="668" height="263" loading="lazy">
+                            <img class="vis2" src="https://img.thingsboard.io/visualize2.svg"
+                                alt="Common chart with points" width="457" height="263" loading="lazy">
+                            <img class="vis3" src="https://img.thingsboard.io/visualize3.svg" alt="Digital level chart"
+                                width="197" height="263" loading="lazy">
+                        </div>
+                        <div class="feature-des"><span class="phrase-heading">Collect and visualize data</span>
+                            <p>Collect and store telemetry data in scalable and fault-tolerant way. Visualize your data
+                                with built-in or custom widgets and flexible dashboards. Share dashboards with your
+                                customers.</p>
+                            <a class="read-more-button" href="docs/user-guide/dashboards/">Read more about visualization
+                                <i class="fas fa-chevron-right arrow first"></i>
+                                <i class="fas fa-chevron-right arrow second"></i>
+                                <i class="fas fa-chevron-right arrow third"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scada">
+            <div class="main-div">
+                <div id="features-top-1">
+                    <div class="background">
+                        <div class="main2"></div>
+                    </div>
+                    <div class="blocks scada">
+                        <div class="feature-des">
+                            <div class="scada-mode-selector">
+                                <div class="mode active gtm_button" onclick="activateScadaSection(this, 'performance')">
+                                    <h3>High-performance</h3>
+                                </div>
+                                <div class="mode gtm_button" onclick="activateScadaSection(this, 'traditional')">
+                                    <h3>Traditional</h3>
+                                </div>
+                            </div>
+                            <span class="phrase-heading scada-title">SCADA High-performance</span>
+                            <p>Monitor and control your industrial processes in real time with SCADA. Use SCADA symbols
+                                on dashboards to create and manage any workflow, offering full flexibility to design and
+                                oversee operations according to your requirements.</p>
+                            <a class="read-more-button" href="/use-cases/scada/">Read more about SCADA
+                                <i class="fas fa-chevron-right arrow first"></i>
+                                <i class="fas fa-chevron-right arrow second"></i>
+                                <i class="fas fa-chevron-right arrow third"></i>
+                            </a>
+                        </div>
+                        <div class="scada-svg">
+                            <img class="scada-scheme high-perf"
+                                src="https://img.thingsboard.io/high-perf-scada-background.svg"
+                                alt="SCADA background blocks schema">
+                            <img class="scada-scheme trad hidden" src="https://img.thingsboard.io/scada-background.svg"
+                                alt="SCADA background blocks schema">
+                            <div class="scada-fade"></div>
+                            <div class="scada-background"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="react">
+            <div class="main-div">
+                <div id="features-top-2">
+                    <div class="background">
+                        <div class="main3"></div><img src="https://img.thingsboard.io/grid.svg" alt="Grid background"
+                            loading="lazy">
+                        <div class="small5"></div>
+                        <div class="small6"></div>
+                    </div>
+                    <div class="blocks dark">
+                        <div class="process">
+                            <img class="react" src="https://img.thingsboard.io/react.svg" alt="Rule nodes chain"
+                                width="1031" height="230" loading="lazy">
+                            <img class="add-rule" src="https://img.thingsboard.io/add-rule.svg"
+                                alt="Add rule node example" width="626" height="482" loading="lazy">
+                        </div>
+                        <div class="feature-des"><span class="phrase-heading">Process and React</span>
+                            <p>Define data processing rule chains. Transform and normalize your device data. Raise
+                                alarms on incoming telemetry events, attribute updates, device inactivity and user
+                                actions.</p>
+                            <a class="read-more-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Read
+                                more about rule engine
+                                <i class="fas fa-chevron-right arrow first"></i>
+                                <i class="fas fa-chevron-right arrow second"></i>
+                                <i class="fas fa-chevron-right arrow third"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="blocks micro">
+                        <div class="feature-des microservices">
+                            <h2>Microservices</h2>
+                            <p>Construct your ThingsBoard cluster and get maximum scalability and fault-tolerance with
+                                microservices architecture. ThingsBoard also supports both cloud and on-premises
+                                deployments.</p>
+                            <a class="read-more-button" href="/docs/reference/msa/">Read more about microservices
+                                <i class="fas fa-chevron-right arrow first"></i>
+                                <i class="fas fa-chevron-right arrow second"></i>
+                                <i class="fas fa-chevron-right arrow third"></i>
+                            </a>
+                        </div>
+                        <img src="https://img.thingsboard.io/microservices.svg" alt="Microservices blocks schema"
+                            width="569" height="327" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products">
+            <div class="main-div">
+                <div class="background">
+                    <div class="products"></div>
+                    <div class="small7"></div>
+                    <div class="small8"></div>
+                </div>
+                <h3 class="product-title">Products</h3>
+                <div class="product-list">
+                    <div>
+                        <p>ThingsBoard</p>
+                        <h2>Community Edition</h2>
+                        <h3>Bring your ideas to life</h3>
+                        <img src="https://img.thingsboard.io/community.svg" alt="Community edition blocks" width="228"
+                            height="134" loading="lazy">
+                        <a href="/docs/">See Community Edition documentation</a>
+                    </div>
+                    <div class="main">
+                        <p>ThingsBoard</p>
+                        <h2>Cloud</h2>
+                        <h3>Keep everything in a secure cloud</h3>
+                        <img src="https://img.thingsboard.io/cloud.svg" alt="Cloud edition blocks" width="280"
+                            height="164" loading="lazy">
+                        <a href="/products/paas/">See Cloud documentation</a>
+                    </div>
+                    <div>
+                        <p>ThingsBoard</p>
+                        <h2>Professional Edition</h2>
+                        <h3>Get all the functions of ThingsBoard</h3>
+                        <img src="https://img.thingsboard.io/professional.svg" alt="Professional edition blocks"
+                            width="228" height="140" loading="lazy">
+                        <a href="/products/thingsboard-pe/">See Professional Edition documentation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="product-ecosystem">
+            <div class="main-div">
+                <div class="background">
+                    <div class="product-ecosystem"></div>
+                </div>
+                <h3 class="product-ecosystem-title">Product ecosystem</h3>
+                <div class="product-ecosystem-list">
+                    <div>
+                        <h2>Edge</h2>
+                        <h3>Edge computing</h3>
+                        <img src="https://img.thingsboard.io/thingsboard-e-icon.svg" alt="Thingsboard Edge" width="100"
+                            height="100" loading="lazy">
+                        <a href="/products/thingsboard-edge/">Read more</a>
+                    </div>
+                    <div>
+                        <h2>IoT Gateway</h2>
+                        <h3>Connect legacy protocols</h3>
+                        <img src="https://img.thingsboard.io/gateway-icon.svg" alt="IoT Gateway" width="100"
+                            height="100" loading="lazy">
+                        <a href="/docs/iot-gateway/what-is-iot-gateway/">Read more</a>
+                    </div>
+                    <div>
+                        <h2>MQTT Broker</h2>
+                        <h3>Connect MQTT clients</h3>
+                        <img src="https://img.thingsboard.io/tbmq-icon.svg" alt="MQTT Broker" width="100" height="100"
+                            loading="lazy">
+                        <a href="/products/mqtt-broker/">Read more</a>
+                    </div>
+                    <div>
+                        <h2>Trendz Analytics</h2>
+                        <h3>Data analytics and Prediction</h3>
+                        <img src="https://img.thingsboard.io/trendz-icon.svg" alt="Trendz Analytics" width="100"
+                            height="100" loading="lazy">
+                        <a href="/products/trendz/">Read more</a>
+                    </div>
+                    <div>
+                        <h2>Mobile Application</h2>
+                        <h3>IoT mobile product</h3>
+                        <img src="https://img.thingsboard.io/tb-mobile-icon.svg" alt="Mobile Application" width="100"
+                            height="100" loading="lazy">
+                        <a href="/products/mobile/">Read more</a>
+                    </div>
+                    <div>
+                        <h2>PE Mobile Application</h2>
+                        <h3>Advanced IoT mobile product</h3>
+                        <img src="https://img.thingsboard.io/tb-pe-mobile-icon.svg" alt="PE Mobile Application"
+                            width="100" height="100" loading="lazy">
+                        <a href="/products/mobile-pe/">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dashboard_description">
+            <div class="main-div">
+                <div _ngcontent-ng-c1852626429="" class="background">
+                    <div _ngcontent-ng-c1852626429="" class="dashboards"></div>
+                    <div _ngcontent-ng-c1852626429="" class="small9"></div>
+                    <div _ngcontent-ng-c1852626429="" class="small10"></div>
+                </div>
+                <h3>Real-Time IoT Dashboards</h3>
+                <p>
+                    ThingsBoard allows you to create rich IoT Dashboards for data visualization and remote device
+                    control in real-time. More than 30 customizable widgets allows you to build end-user custom
+                    dashboards for most IoT use-cases.
+                </p>
+
+            </div>
+        </section>
+
+        <section id="rule-engine">
+            <div class="main-div">
+                <div class="rule hidden" data-loading="false">
+                    <a class="rule-button img-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">
+                        <div class="overlay">
+                            <div class="eye"><i class="far fa-eye"></i>See more about IoT Rule Engine</div>
+                        </div><img src="https://img.thingsboard.io/demo/send-email-rule-chain.gif"
+                            alt="Send email rule chain creation" width="890" height="375" loading="lazy">
+                    </a>
+                    <div class="des">
+                        <h3>IoT Rule Engine</h3>
+                        <p>ThingsBoard allows you to create complex <a
+                                href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Rule Chains</a> to process
+                            data from your devices and match your application specific use cases.</p>
+                        <a class="read-more-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Read
+                            more about rule engine
+                            <i class="fas fa-chevron-right arrow first"></i>
+                            <i class="fas fa-chevron-right arrow second"></i>
+                            <i class="fas fa-chevron-right arrow third"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bottom-features">
+            <div class="main-div">
+                <div class="background">
+                    <div class="bottom-features1"></div>
+                    <div class="bottom-features2"></div>
+                    <div class="small11"></div>
+                    <div class="small12"></div>
+                    <div class="bottom-features3"></div>
+                    <div class="small13"></div>
+                    <div class="small14"></div>
+                    <div class="small15"></div>
+                </div>
+                <h3>ThingsBoard Features</h3>
+                <div id="cards" class="row">
+                    <div class="col-lg-6">
+                        <div class="blocks">
+                            <img src="https://img.thingsboard.io/telemetry-icon.svg" alt="Telemetry data collection"
+                                loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/telemetry/">Telemetry Data Collection</a>
+                                <p>Collect and store telemetry data in reliable way, surviving network and hardware
+                                    failures. Access collected data using customizable web dashboards or server-side
+                                    APIs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/tenancy-icon.svg"
+                                alt="Multi tenancy available" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/ui/tenants/">Multi-tenancy</a>
+                                <p>Support multi-tenant installations out-of-the-box. Single tenant may have multiple
+                                    tenant administrators and millions of devices and customers.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/visualization-icon.svg"
+                                alt="Data visualization providing" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/visualization/">Data Visualization</a>
+                                <p>Provides 30+ configurable widgets out-of-the-box and ability to create your own
+                                    widgets using built-in editor. Built-in line-charts, digital and analog gauges, maps
+                                    and much more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/scalability-icon.svg"
+                                alt="Scalability available" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/reference/#thingsboard-services">Horizontal scalability</a>
+                                <p>Amount of supported server-side requests and devices increase linearly as new
+                                    thingsboard servers are added in clustering mode. No downtime, server restarts or
+                                    application errors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/engine-icon.svg" alt="IoT rule engine"
+                                loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">IoT Rule
+                                    Engine</a>
+                                <p>Process incoming device data with flexible rule chains based on entity attributes or
+                                    message content. Forward data to external systems or trigger alarms using custom
+                                    logic. Configure complex notification chains on alarms. Enrich server-side
+                                    functionality or manipulate your devices with highly customizable rules. Define your
+                                    application logic with drag-n-drop rule chain designer.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/tolerance-icon.svg"
+                                alt="Fault tolerance" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/reference/#thingsboard-services">Fault-tolerance</a>
+                                <p>All thingsboard servers are identical. No master-workers or hot standby. Node failure
+                                    is automatically detected. Failed nodes can be replaced without downtime. Persisted
+                                    data is replicated using reliable NoSQL database.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/device-icon.svg"
+                                alt="Device management" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/ui/devices/">Device Management</a>
+                                <p>Provides ability to register and manage devices. Allows to monitor client-side and
+                                    provision server-side <a href="/docs/user-guide/attributes/">device attributes</a>.
+                                    Provides API for server-side applications to send <a
+                                        href="/docs/user-guide/rpc/">RPC commands</a> to devices and vice-versa.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/security-icon.svg"
+                                alt="Security propagate" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/device-credentials/">Security</a>
+                                <p>Supports transport encryption for both MQTT and HTTP(s) protocols. Supports device
+                                    authentication and device credentials management.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/asset-icon.svg"
+                                alt="Asset management ability" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/ui/assets/">Asset Management</a>
+                                <p>Provides ability to register and manage assets. Allows to provision server-side <a
+                                        href="/docs/user-guide/attributes/">asset attributes</a> and monitor related <a
+                                        href="/docs/user-guide/alarms/">alarms</a>. Ability to build hierarchy of
+                                    entities using <a href="/docs/user-guide/entities-and-relations/">relations</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/integration-icon.svg"
+                                alt="Customization and integration" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/contribution/how-to-contribute/">Customization
+                                    and Integration</a>
+                                <p>Extend default platform functionality using customizable <a
+                                        href="/docs/user-guide/rule-engine-2-0/re-getting-started/">rule chains</a>, <a
+                                        href="/docs/user-guide/ui/widget-library/">widgets</a> and <a
+                                        href="/docs/reference/protocols/">transport implementations</a>. In addition to
+                                    MQTT, CoAP and HTTP support, ThingsBoard users can use their own transport
+                                    implementations or customize behaviour of existing protocols.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/alarms-icon.svg"
+                                alt="Alarms management" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/user-guide/alarms/">Alarms Management</a>
+                                <p>Provides ability to create and manage <a href="/docs/user-guide/alarms/">alarms</a>
+                                    related to your entities: devices, assets, customers, etc. Allows real-time alarms
+                                    monitoring and alarms propagation to related entities hierarchy. Raise alarms on
+                                    device disconnect or inactivity events.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/opensource-icon.svg"
+                                alt="100% Open-source platform" loading="lazy">
+                            <div>
+                                <a class="title" href="https://github.com/thingsboard/thingsboard">100% Open-source</a>
+                                <p>ThingsBoard is licensed under Apache License 2.0, so you can use any it in your
+                                    commercial products for free. You can even host it as a SaaS or PaaS solution.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/microservices-icon.svg"
+                                alt="Microservices or monolithic" loading="lazy">
+                            <div>
+                                <a class="title"
+                                    href="/docs/reference/#monolithic-vs-microservices-architecture">Microservices or
+                                    Monolithic</a>
+                                <p>Supports <a href="/docs/reference/monolithic/">monolithic</a> deployment for getting
+                                    started or small environments. Provides ability to upgrade to <a
+                                        href="/docs/reference/msa/">microservices</a> for high availability and
+                                    horizontal scalability.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="blocks"><img src="https://img.thingsboard.io/database-icon.svg"
+                                alt="SQL, NoSQL and Hybrid database approach" loading="lazy">
+                            <div>
+                                <a class="title" href="/docs/reference/#sql-vs-nosql-vs-hybrid-database-approach">SQL,
+                                    NoSQL and Hybrid database</a>
+                                <p>Supports various database options and ability to choose where to store main entities
+                                    and where to store telemetry data</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</main>
+<footer>
+    <div class="light-text main-div">
+        <div class="newsletterSubsContainer">
+            <script>
+                function subscribeForNewsletter(event) {
+                    event.stopPropagation();
+                    var script_tag = document.createElement('script');
+                    script_tag.setAttribute("type", "text/javascript");
+                    script_tag.setAttribute("src", "https://static.mailerlite.com/js/w/webforms.min.js?v28bf44f740701752bfc6767bc7e171d4");
+                    document.getElementsByTagName("head")[0].appendChild(script_tag);
+                    $(event.target).css('display', 'none');
+                    $('#mlb2-7341216').css('display', 'block');
+                }
+            </script>
+            <button id="Footer_SignUpForNews" class="n-button price subscribe gtm_button "
+                onclick="subscribeForNewsletter(event)">Sign up for ThingsBoard news</button>
+            <div id="mlb2-7341216" class="ml-subscribe-form ml-subscribe-form-7341216"
+                style="display: none; max-width: 100%;">
+                <!--            <div id="mlb2-7341216" class="ml-subscribe-form ml-subscribe-form-7341216" style="display: block;">-->
+                <div class="ml-vertical-align-center">
+                    <div class="subscribe-form ml-block-success" style="display: none;">
+                        <div class="form-section">
+                            <p>Thank you for your interest in ThingsBoard!<br>Have a great day!</p>
+                        </div>
+                    </div>
+                    <form class="ml-block-form gtm_form" id="Footer_SignUpForNewsForm"
+                        action="https://static.mailerlite.com/webforms/submit/r9r9x7" data-id="708170"
+                        data-code="r9r9x7" method="POST" target="_blank">
+                        <div class="subscribe-form horizontal">
+                            <div class="form-section horizontal">
+                                <div class="form-group ml-field-email ml-validate-required ml-validate-email">
+                                    <input type="email" name="fields[email]" class="form-control"
+                                        placeholder="Email address*" value="" autocomplete="email"
+                                        x-autocompletetype="email" spellcheck="false" autocapitalize="off"
+                                        autocorrect="off">
+                                </div>
+                            </div>
+                            <input type="hidden" name="ml-submit" value="1">
+                            <div class="form-section horizontal ml-button-position">
+                                <button id="Footer_SignUpForNews_Subscribe"
+                                    class="primary n-button price subscribe gtm_button" type="submit">
+                                    Subscribe
+                                </button>
+                                <button disabled="disabled" style="display: none;" type="button"
+                                    class="n-button loading">
+                                    <img src="https://static.mailerlite.com/images/rolling@2x.gif" width="20"
+                                        height="20" style="width: 20px; height: 20px;" alt="Loading in progress"
+                                        loading="lazy">
+                                </button>
+                            </div>
+                            <p>By subscribing you agree to receive newsletters from ThingsBoard, Inc.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="deeper">
+            <a href="/" class="footer-logo" aria-label="Link to homepage"></a>
+            <nav>
+                <a href="/docs/getting-started-guides/helloworld/">Get Started</a>
+                <a href="/docs/">Documentation</a>
+                <a href="/iot-use-cases/">Use cases</a>
+                <a href="/blog/">Blog</a>
+                <a href="/docs/services/">Services</a>
+                <a href="/docs/contact-us/">Contact us</a>
+            </nav>
+        </div>
+        <div class="deepmost">
+            <div class="copyright">© 2025 The ThingsBoard Authors</div>
+            <div class="social">
+                <a href="https://github.com/thingsboard/thingsboard" arial-label="Link to our Github" class="github">
+                    <i class="fab fa-lg fa-github" style="color: #847989"></i>
+                </a>
+                <a href="https://www.youtube.com/thingsboard" arial-label="Link to our Youtube channel" class="youtube">
+                    <i class="fab fa-lg fa-youtube" style="color: #847989"></i>
+                </a>
+
+                <a href="https://stackoverflow.com/questions/tagged/thingsboard"
+                    arial-label="Link to our Stack Overflow page" class="stack-overflow">
+                    <i class="fab fa-lg fa-stack-overflow" style="color: #847989"></i>
+                </a>
+
+                <a href="https://www.facebook.com/thingsboard" arial-label="Link to our Facebook" class="facebook">
+                    <i class="fab fa-lg fa-facebook" style="color: #847989"></i>
+                </a>
+
+                <a href="https://www.instagram.com/thingsboard_iot/" arial-label="Link to our Instagram"
+                    class="instagram">
+                    <i class="fab fa-lg fa-instagram" style="color: #847989"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/company/thingsboard/" arial-label="Link to our linkedin"
+                    class="linkedin">
+                    <i class="fab fa-lg fa-linkedin" style="color: #847989"></i>
+                </a>
+
+                <a href="https://twitter.com/thingsboard" arial-label="Link to our X" class="twitter">
+                    <img src="https://img.thingsboard.io/social-twitt-icon.svg" alt="Link to our X" width="18"
+                        height="18" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
