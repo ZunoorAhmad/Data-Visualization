@@ -1,0 +1,289 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Roboto, sans-serif;
+}
+
+.header {
+    background-color: #2b3a57;
+    color: white;
+    padding: 0.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 500;
+
+        img {
+            height: 32px;
+        }
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .email {
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .role {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+    }
+}
+
+.nav-menu {
+    background-color: white;
+    padding: 0.5rem 2rem;
+    display: flex;
+    gap: 2rem;
+    border-bottom: 1px solid #e0e0e0;
+    height: 56px;
+    align-items: center;
+
+    .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: #666;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        &.active {
+            background-color: #e8eaf6;
+            color: #3f51b5;
+        }
+
+        &:hover:not(.active) {
+            background-color: #f5f5f5;
+        }
+    }
+}
+
+.main-content {
+    padding: 2rem;
+    flex: 1;
+
+    h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .breadcrumb {
+        color: #666;
+        margin: 0.5rem 0 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+
+    .metric-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+        .metric-title {
+            color: #666;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .metric-icon {
+                width: 20px;
+                height: 20px;
+
+                &.electricity {
+                    fill: #ff9800;
+                }
+
+                &.water {
+                    fill: #2196f3;
+                }
+
+                &.gas {
+                    fill: #4caf50;
+                }
+
+                &.air {
+                    fill: #9c27b0;
+                }
+            }
+        }
+
+        .metric-value {
+            margin: 0.75rem 0;
+
+            .number {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #333;
+            }
+
+            .unit {
+                color: #666;
+                margin-left: 0.25rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        .metric-period,
+        .metric-subtitle {
+            color: #999;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.charts-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+
+    .temperature-chart,
+    .usage-charts {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .chart-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            .date-range {
+                color: #666;
+                font-size: 0.9rem;
+            }
+
+            button {
+                padding: 0.5rem 1rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                background: white;
+                color: #666;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 0.9rem;
+                transition: all 0.2s ease;
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    fill: currentColor;
+                }
+
+                &:hover {
+                    background: #f5f5f5;
+                }
+
+                &.more-btn {
+                    padding: 0.5rem;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .chart-legend {
+        margin-top: 1rem;
+        display: flex;
+        gap: 2rem;
+        font-size: 0.8rem;
+        color: #666;
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            .legend-line {
+                width: 20px;
+                height: 2px;
+                border-radius: 1px;
+
+                &.blue {
+                    background-color: #2196f3;
+                }
+
+                &.gray {
+                    background-color: #666;
+                }
+            }
+        }
+    }
+
+    .usage-charts {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        h2 {
+            margin: 0 0 1rem;
+            font-size: 1.1rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+    #temperatureChart {
+        height: 300px !important;
+        width: 100% !important;
+    }
+
+    #usageByDaysChart,
+    #usageByDeviceChart {
+        height: 200px !important;
+    }
+}

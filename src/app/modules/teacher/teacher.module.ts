@@ -2,7 +2,6 @@ import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { defaultDeclarations, defaultImports, defaultProviders } from './defaultConfig';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { faList, faPen } from '@fortawesome/free-solid-svg-icons';
-import { FooterComponent } from "./components/footer/footer.component";
 
 @NgModule({
     declarations: defaultDeclarations,
