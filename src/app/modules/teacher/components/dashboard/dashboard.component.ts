@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 
 Chart.register(...registerables);
@@ -10,6 +10,25 @@ Chart.register(...registerables);
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
     constructor() {}
+
+    @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
+    selectedFileName: string | null = null;
+
+    triggerFileInput() {
+        this.fileInput.nativeElement.click();
+    }
+
+    onFileSelected(event: Event) {
+        const input = event.target as HTMLInputElement;
+        if (input.files && input.files.length > 0) {
+            this.selectedFileName = input.files[0].name;
+        }
+    }
+
+    clearFile() {
+        this.selectedFileName = null;
+        this.fileInput.nativeElement.value = ''; // Reset the input
+    }
 
     ngOnInit() {
         return;

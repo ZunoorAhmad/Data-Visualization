@@ -13,6 +13,8 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { AngularPhoneNumberInput } from 'angular-phone-number-input';
 import { FormsModule } from '@angular/forms';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import Aura from '@primeng/themes/aura';
 
 @NgModule({
     declarations: [AppComponent],
@@ -35,6 +37,7 @@ import { FormsModule } from '@angular/forms';
         ConfirmationService,
         MessageService,
         DynamicDialogConfig,
+        provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
 })

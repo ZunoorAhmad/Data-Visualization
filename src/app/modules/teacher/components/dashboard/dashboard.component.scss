@@ -287,3 +287,17 @@
         height: 200px !important;
     }
 }
+
+button {
+    padding: 8px 16px;
+    background-color: #007ad9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+span {
+    margin-left: 12px;
+    font-weight: 500;
+}

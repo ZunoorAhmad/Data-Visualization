@@ -39,14 +39,16 @@ import { TagModule } from 'primeng/tag';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { TeacherRoutingModule } from './teacher-routing.module';
 import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
-export const defaultDeclarations = [HomeComponent];
+export const defaultDeclarations = [HomeComponent, DashboardComponent];
 export const defaultImports = [
     CommonModule,
     TabMenuModule,
     SidebarModule,
     MenuModule,
     InputTextModule,
+    ButtonModule,
     ChipsModule,
     ButtonModule,
     InputMaskModule,
