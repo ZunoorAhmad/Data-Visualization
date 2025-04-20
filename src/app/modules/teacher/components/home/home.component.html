@@ -6,10 +6,10 @@
     <nav class="head-menu">
         <ul>
             <li class="nav-products" data-submenu-id="nav-products">
-                <span class="main-menu-link" onclick="listburg('/teacher/dashboard')">Dashboard</span>
+                <span class="main-menu-link" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
             </li>
             <li class="nav-services" data-submenu-id="nav-services">
-                <span class="main-menu-link" onclick="listburg('/teacher/about')">About-us</span>
+                <span class="main-menu-link" (click)="global.goToPage('/teacher/about')">About-us</span>
             </li>
         </ul>
         <div class="indicator">
