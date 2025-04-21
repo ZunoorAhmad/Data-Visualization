@@ -107,3 +107,25 @@
         </div> -->
     </div>
 </div>
+
+<p-dialog header="Detail" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
+    [resizable]="false">
+    <div class="modal-content">
+        <div class="image-container">
+            <img src="./../../../../../assets/image/confusion-marix.jpg" alt="Modal Image" class="modal-image">
+        </div>
+        <div class="text-inputs">
+            <div class="field">
+                <label for="line1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque id,
+                    corporis molestiae illum eius. Doloremque recusandae veniam quam ullam saepe iste sit exercitationem
+                    deleniti ipsum mollitia voluptatem, soluta sequi architecto error necessitatibus reprehenderit, sunt
+                    aperiam? Veritatis quia dolores facilis illum distinctio laudantium minima et voluptates aliquam,
+                    voluptas, tenetur fugit.</label>
+            </div>
+        </div>
+    </div>
+    <ng-template pTemplate="footer">
+        <button pButton type="button" label="Close Modal" icon="pi pi-times" (click)="closeModal()"
+            class="p-button-secondary"></button>
+    </ng-template>
+</p-dialog>

@@ -40,8 +40,9 @@ import { InputSwitchModule } from 'primeng/inputswitch';
 import { TeacherRoutingModule } from './teacher-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DetailModalComponent } from './components/detail-modal/detail-modal.component';
 
-export const defaultDeclarations = [HomeComponent, DashboardComponent];
+export const defaultDeclarations = [HomeComponent, DashboardComponent,DetailModalComponent];
 export const defaultImports = [
     CommonModule,
     TabMenuModule,

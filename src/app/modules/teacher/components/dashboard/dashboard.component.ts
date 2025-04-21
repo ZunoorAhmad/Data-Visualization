@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 import { GlobalService } from 'src/app/services/global.service';
+import { DetailModalComponent } from '../detail-modal/detail-modal.component';
 
 Chart.register(...registerables);
 
@@ -39,6 +40,34 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.initTemperatureChart();
         this.initUsageByDaysChart();
         this.initUsageByDeviceChart();
+    }
+
+    openModal() {
+        console.log("Open modal working");
+        this.displayModal = true;
+    }
+
+    displayModal: boolean = false;
+    line1: string = '';
+    line2: string = '';
+    line3: string = '';
+
+    showModal() {
+        this.displayModal = true;
+    }
+
+    closeModal() {
+        this.displayModal = false;
+    }
+
+    save() {
+        // Implement save logic here
+        console.log('Saving:', {
+            line1: this.line1,
+            line2: this.line2,
+            line3: this.line3
+        });
+        this.closeModal();
     }
 
     private initTemperatureChart() {

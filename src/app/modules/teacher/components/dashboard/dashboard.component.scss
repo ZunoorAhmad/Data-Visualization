@@ -328,3 +328,11 @@ span {
     margin-left: 12px;
     font-weight: 500;
 }
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: white;
+}
