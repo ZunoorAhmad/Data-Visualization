@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import { GlobalService } from 'src/app/services/global.service';
 
 Chart.register(...registerables);
 
@@ -9,7 +10,7 @@ Chart.register(...registerables);
     styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
-    constructor() {}
+    constructor(public global: GlobalService) { }
 
     @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
     selectedFileName: string | null = null;

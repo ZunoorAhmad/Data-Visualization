@@ -6,6 +6,18 @@
     font-family: Roboto, sans-serif;
 }
 
+.charts-section-div {
+    .charts-section-col {
+        padding: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+}
+
 .header {
     background-color: #2b3a57;
     color: white;
@@ -82,7 +94,7 @@
 }
 
 .main-content {
-    padding: 2rem;
+    padding: 6rem 2rem 2rem;
     flex: 1;
 
     h1 {
@@ -106,10 +118,25 @@
     margin-bottom: 2rem;
 
     .metric-card {
-        background: white;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        button {
+            width: 85%;
+            height: 45px;
+            border-radius: 30px;
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: Phantomsans, sans-serif;
+            font-size: 24px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding: 12px 24px;
+        }
 
         .metric-title {
             color: #666;
