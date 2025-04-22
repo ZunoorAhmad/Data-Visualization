@@ -8,4 +8,10 @@ import { GlobalService } from 'src/app/services/global.service';
 })
 export class AboutComponent {
   constructor(public global: GlobalService) { }
+
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }

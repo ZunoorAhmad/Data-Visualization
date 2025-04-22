@@ -9,5 +9,10 @@ import { GlobalService } from 'src/app/services/global.service';
 export class HomeComponent {
 
   constructor(public global: GlobalService) { }
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
 }

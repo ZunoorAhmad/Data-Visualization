@@ -13,6 +13,12 @@ Chart.register(...registerables);
 export class DashboardComponent implements OnInit, AfterViewInit {
     constructor(public global: GlobalService) { }
 
+    menuOpen = false;
+
+    toggleMenu() {
+      this.menuOpen = !this.menuOpen;
+    }
+
     @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
     selectedFileName: string | null = null;
 

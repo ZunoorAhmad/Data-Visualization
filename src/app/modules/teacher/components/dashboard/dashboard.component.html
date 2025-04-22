@@ -1,28 +1,32 @@
-<header>
-    <div class="logo-burger">
-        <img src="/assets/image/dataA-logo.jpg" width="48" height="48">
-        <h1>IoTGuard</h1>
-    </div>
-    <nav class="head-menu">
-        <ul>
-            <li class="nav-products" data-submenu-id="nav-products">
-                <span class="main-menu-link" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-            </li>
-            <li class="nav-services" data-submenu-id="nav-services">
-                <span class="main-menu-link" (click)="global.goToPage('/teacher/about')">About-us</span>
-            </li>
-        </ul>
-        <div class="indicator">
-            <div class="head-arrow"></div>
-            <div class="line"></div>
-            <div class="sub-background"></div>
+<div class="bg-white shadow-md p-4 sticky top-0 z-1">
+    <div class="max-w-7xl mx-auto flex justify-content-between align-items-center">
+        <div class="flex align-items-center	gap-3 text-2xl font-bold text-black-alpha-90">
+            <img src="/assets/image/dataA-logo.jpg" width="60" height="60">
+            <h1>IoTGuard</h1>
         </div>
-    </nav>
-    <div class="head-buttons">
-        <!-- <a id="Menu_TryItNow" href="/installations/" class="n-button try gtm_button">Try it now</a>
-        <a id="Menu_Pricing" href="/pricing/" class="n-button price gtm_button">Pricing</a> -->
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex align-items-center w-full justify-content-center gap-3">
+            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+            <button (click)="toggleMenu()" class="text-gray-700 focus:outline-none text-2xl">
+                ☰
+            </button>
+        </div>
     </div>
-</header>
+
+    <!-- Mobile Nav -->
+    <div *ngIf="menuOpen" class="md:hidden flex flex-column gap-3 mt-4 px-4">
+        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+    </div>
+</div>
 <div class="dashboard">
     <!-- Main Content -->
     <div class="main-content">
@@ -33,19 +37,19 @@
         </div>
 
         <!-- Metrics Grid -->
-        <div class="metrics-grid">
-            <div class="metric-card text-center">
+        <div class="metrics-grid flex align-items-center flex-wrap">
+            <div class="metric-card text-center w-3">
                 <button type="button" (click)="triggerFileInput()">Upload</button>
                 <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none" />
                 <span *ngIf="selectedFileName">{{ selectedFileName }}</span>
             </div>
-            <div class="metric-card text-center">
+            <div class="metric-card text-center w-3">
                 <button type="button" (click)="clearFile()" class="btn btn-danger">Submit</button>
             </div>
-            <div class="metric-card text-center">
+            <div class="metric-card text-center w-3">
                 <button type="button" class="btn btn-primary">Remove</button>
             </div>
-            <div class="metric-card text-center">
+            <div class="metric-card text-center w-3">
                 <button type="button" (click)="openModal()" class="btn btn-dark">Download</button>
             </div>
         </div>
