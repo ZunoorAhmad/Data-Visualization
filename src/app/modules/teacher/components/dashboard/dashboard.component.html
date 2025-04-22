@@ -37,19 +37,19 @@
         </div>
 
         <!-- Metrics Grid -->
-        <div class="metrics-grid flex align-items-center flex-wrap">
-            <div class="metric-card text-center w-3">
+        <div class="metrics-grid flex align-items-center flex-wrap md:gap-0 gap-3">
+            <div class="metric-card text-center sm:w-3 w-full">
                 <button type="button" (click)="triggerFileInput()">Upload</button>
                 <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none" />
                 <span *ngIf="selectedFileName">{{ selectedFileName }}</span>
             </div>
-            <div class="metric-card text-center w-3">
+            <div class="metric-card text-center sm:w-3 w-full">
                 <button type="button" (click)="clearFile()" class="btn btn-danger">Submit</button>
             </div>
-            <div class="metric-card text-center w-3">
+            <div class="metric-card text-center sm:w-3 w-full">
                 <button type="button" class="btn btn-primary">Remove</button>
             </div>
-            <div class="metric-card text-center w-3">
+            <div class="metric-card text-center sm:w-3 w-full">
                 <button type="button" (click)="openModal()" class="btn btn-dark">Download</button>
             </div>
         </div>
@@ -112,11 +112,11 @@
     </div>
 </div>
 
-<p-dialog header="Detail" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [draggable]="false"
-    [resizable]="false">
+<p-dialog header="Detail" [(visible)]="displayModal" [modal]="true" [draggable]="false"
+    [resizable]="false" class="Guard-Dashboard">
     <div class="modal-content">
         <div class="image-container">
-            <img src="./../../../../../assets/image/confusion-marix.jpg" alt="Modal Image" class="modal-image">
+            <img src="/assets/image/confusion-marix.jpg" alt="Modal Image" class="modal-image">
         </div>
         <div class="text-inputs">
             <div class="field">
@@ -129,7 +129,7 @@
         </div>
     </div>
     <ng-template pTemplate="footer">
-        <button pButton type="button" label="Close Modal" icon="pi pi-times" (click)="closeModal()"
-            class="p-button-secondary"></button>
+        <button pButton type="button" label="Close Modal" (click)="closeModal()"
+            class="p-button-secondary text-black-alpha-90 text-xl"></button>
     </ng-template>
 </p-dialog>
