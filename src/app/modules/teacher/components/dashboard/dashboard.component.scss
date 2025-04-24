@@ -15,8 +15,25 @@
             height: 100%;
             object-fit: fill;
         }
+
+        .chart-section-second {
+            height: 100%;
+
+            img {
+                width: 50%;
+                height: 100%;
+                padding-right: 5px;
+            }
+
+            img:last-child {
+                padding-left: 5px;
+                padding-right: 0;
+            }
+        }
     }
 }
+
+
 
 .main-content {
     padding: 6rem 2rem 2rem;
