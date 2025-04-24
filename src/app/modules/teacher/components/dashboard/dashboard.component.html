@@ -6,10 +6,13 @@
         </div>
 
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex align-items-center w-full justify-content-center gap-3">
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        <nav class="hidden md:flex align-items-center w-full justify-content-end gap-3">
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/home')">Home</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/about')">About</span>
         </nav>
 
         <!-- Mobile menu button -->
@@ -22,16 +25,19 @@
 
     <!-- Mobile Nav -->
     <div *ngIf="menuOpen" class="md:hidden flex flex-column gap-3 mt-4 px-4">
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/home')">Home</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/about')">About</span>
     </div>
 </div>
 <div class="dashboard">
     <!-- Main Content -->
     <div class="main-content">
         <h1>IOT Guard Dashboard</h1>
-        <div class="breadcrumb">
+        <div class="breadcrumb text-lg">
             Our dashboard visualizes, analyzes, and automatically mitigates risks across every internet‑connected device
             <!-- Locations Dashboard > ThingsBoard Offices > Vozdvizhenka Development TB Office -->
         </div>
@@ -60,7 +66,10 @@
                 <img src="/assets/image/confusion-marix.jpg">
             </div>
             <div class="col-6 charts-section-col">
-                <img src="/assets/image/Classification Report XG.png">
+                <div class="flex">
+                    <img src="/assets/image/Classification Report XG.png">
+                    <img src="/assets/image/Classification-Report-Random.png">
+                </div>
             </div>
             <div class="col-6 charts-section-col">
                 <img src="/assets/image/Model Accuracy.png">
@@ -112,19 +121,19 @@
     </div>
 </div>
 
-<p-dialog header="Detail" [(visible)]="displayModal" [modal]="true" [draggable]="false"
-    [resizable]="false" class="Guard-Dashboard">
+<p-dialog header="Detail" [(visible)]="displayModal" [modal]="true" [draggable]="false" [resizable]="false"
+    class="Guard-Dashboard">
     <div class="modal-content">
         <div class="image-container">
             <img src="/assets/image/confusion-marix.jpg" alt="Modal Image" class="modal-image">
         </div>
         <div class="text-inputs">
             <div class="field">
-                <label for="line1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur doloremque id,
-                    corporis molestiae illum eius. Doloremque recusandae veniam quam ullam saepe iste sit exercitationem
-                    deleniti ipsum mollitia voluptatem, soluta sequi architecto error necessitatibus reprehenderit, sunt
-                    aperiam? Veritatis quia dolores facilis illum distinctio laudantium minima et voluptates aliquam,
-                    voluptas, tenetur fugit.</label>
+                <label for="line1">Side‑by‑side heat‑maps compare Random Forest (blue) and XGBoost (red); the dark
+                    diagonal cells show both models classify almost all traffic correctly, with Random Forest very
+                    slightly cleaner.
+                    Lighter off‑diagonal dots reveal minor mis‑labeling in classes 1 and 7, suggesting these are the
+                    main areas where further tuning could cut residual errors..</label>
             </div>
         </div>
     </div>
@@ -133,3 +142,48 @@
             class="p-button-secondary text-black-alpha-90 text-xl"></button>
     </ng-template>
 </p-dialog>
+
+<footer>
+    <div class="light-text main-div">
+        <div class="deeper">
+            <a href="/" class="footer-logo" aria-label="Link to homepage"></a>
+            <nav>
+                <div class="microsoft-icons">
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/facebook.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/twitter-bird.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/instagram.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/youtube.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/linkedin.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/github.svg">
+                        </a>
+                    </button>
+                </div>
+            </nav>
+        </div>
+        <div class="deepmost">
+            <div class="copyright">© 2025 The IOT Guard Authors</div>
+        </div>
+    </div>
+</footer>

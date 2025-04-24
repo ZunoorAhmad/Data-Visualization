@@ -6,10 +6,13 @@
         </div>
 
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex align-items-center w-full justify-content-center gap-3">
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        <nav class="hidden md:flex align-items-center w-full justify-content-end gap-3">
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/home')">Home</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/about')">About</span>
         </nav>
 
         <!-- Mobile menu button -->
@@ -22,37 +25,14 @@
 
     <!-- Mobile Nav -->
     <div *ngIf="menuOpen" class="md:hidden flex flex-column gap-3 mt-4 px-4">
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/home')">Home</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/about')">About</span>
     </div>
 </div>
-
-<!-- <header>
-    <div class="logo-burger">
-        <img src="/assets/image/dataA-logo.jpg" width="48" height="48">
-        <h1>IoTGuard</h1>
-    </div>
-    <nav class="head-menu">
-        <ul>
-            <li class="nav-products" data-submenu-id="nav-products">
-                <span class="main-menu-link" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-            </li>
-            <li class="nav-services" data-submenu-id="nav-services">
-                <span class="main-menu-link" (click)="global.goToPage('/teacher/about')">About-us</span>
-            </li>
-        </ul>
-        <div class="indicator">
-            <div class="head-arrow"></div>
-            <div class="line"></div>
-            <div class="sub-background"></div>
-        </div>
-    </nav>
-    <div class="head-buttons">
-        <a id="Menu_TryItNow" href="/installations/" class="n-button try gtm_button">Try it now</a>
-        <a id="Menu_Pricing" href="/pricing/" class="n-button price gtm_button">Pricing</a>
-    </div>
-</header> -->
 <main>
     <section id="hero" class="light-text" data-vide-bg="mp4: https://video.thingsboard.io/tb-cover2.mp4,
 											  webm: https://video.thingsboard.io/tb-cover2.webm,
@@ -71,13 +51,6 @@
         </div>
         <div class="video-cover"></div>
 
-        <div class="achievement">
-            <a href="/blog/top-supplier-retail-2024-2/">
-                <img class="achieve" src="https://img.thingsboard.io/feature-logo/top-supplier-retail-2024.webp"
-                    alt="Top supplier retail 2024" width="110" height="160">
-            </a>
-        </div>
-
         <div id="hero-content" class="">
             <span class="header-animation tb-title">IoTGuard</span>
             <span class="header-animation tb-title">Real-Time IoT Security Platform</span>
@@ -86,17 +59,13 @@
             <div class="header-animation">
                 <a href="#intro" class="button learn-tb">Learn More</a>
             </div>
-            <div class="tb-arrow">
-                <a href="#intro" aria-label="Link to main heading"><i class="pi pi-angle-down"
-                        style="font-size: 2rem"></i></a>
-            </div>
         </div>
     </section>
 
     <section id="overflow">
         <section id="intro">
             <div class="main-div">
-                <h1><a href="docs/getting-started-guides/what-is-thingsboard/">ThingsBoard</a> is a Real-time IoT
+                <h1><a href="docs/getting-started-guides/what-is-thingsboard/">IoTGuard</a> is a Real-time IoT
                     security platform for automated threat detection,
                     advanced analytics, and proactive device protection</h1>
                 <h2 class="second in-the-past-h1">It enables advanced machine
@@ -116,7 +85,7 @@
                         <div class="small3"></div>
                         <div class="small4"></div>
                     </div>
-                    <div class="blocks">
+                    <!-- <div class="blocks">
                         <div class="feature-des"><span class="phrase-heading">Provision and manage devices and
                                 assets</span>
                             <p>Provision, monitor and control your IoT entities in secure way using rich server-side
@@ -135,7 +104,7 @@
                             <img class="device-manage" src="https://img.thingsboard.io/device-manage.svg"
                                 alt="Device managing panel" width="543" height="509" loading="lazy">
                         </div>
-                    </div>
+                    </div> -->
                     <div class="blocks vis">
                         <div class="visualize">
                             <img class="vis1" src="https://img.thingsboard.io/visualize1.svg" alt="Linear chart"
@@ -147,8 +116,7 @@
                         </div>
                         <div class="feature-des"><span class="phrase-heading">Collect and analyze data</span>
                             <p>Gather, store, and
-                                interpret IoT security data in real time. Securely share insights with your team or
-                                stakeholders.</p>
+                                interpret IoT security data in real time. Securely share insights with your team.</p>
                         </div>
                     </div>
                 </div>
@@ -162,7 +130,7 @@
                         <div class="main2"></div>
                     </div>
                     <div class="blocks scada">
-                        <div class="feature-des">
+                        <!-- <div class="feature-des">
                             <div class="scada-mode-selector">
                                 <div class="mode active gtm_button" onclick="activateScadaSection(this, 'performance')">
                                     <h3>High-performance</h3>
@@ -189,7 +157,7 @@
                                 alt="SCADA background blocks schema">
                             <div class="scada-fade"></div>
                             <div class="scada-background"></div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -206,9 +174,7 @@
                     </div>
                     <div class="blocks dark">
                         <div class="process">
-                            <img class="react" src="https://img.thingsboard.io/react.svg" alt="Rule nodes chain"
-                                width="1031" height="230" loading="lazy">
-                            <img class="add-rule" src="https://img.thingsboard.io/add-rule.svg"
+                            <img class="add-rule" src="/assets/image/dashboard-img.jpg"
                                 alt="Add rule node example" width="626" height="482" loading="lazy">
                         </div>
                         <div class="feature-des"><span class="phrase-heading">Monitor and Mitigate</span>
@@ -218,16 +184,10 @@
                                 IoTGuard automatically flags suspicious activities, raises notifications, and enables
                                 swift responses—
                                 whether by isolating compromised devices or prompting immediate user actions.</p>
-                            <a class="read-more-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Read
-                                more about rule engine
-                                <i class="fas fa-chevron-right arrow first"></i>
-                                <i class="fas fa-chevron-right arrow second"></i>
-                                <i class="fas fa-chevron-right arrow third"></i>
-                            </a>
                         </div>
                     </div>
                     <div class="blocks micro">
-                        <div class="feature-des microservices">
+                        <!-- <div class="feature-des microservices">
                             <h2>Microservices</h2>
                             <p>Construct your ThingsBoard cluster and get maximum scalability and fault-tolerance with
                                 microservices architecture. ThingsBoard also supports both cloud and on-premises
@@ -239,13 +199,13 @@
                             </a>
                         </div>
                         <img src="https://img.thingsboard.io/microservices.svg" alt="Microservices blocks schema"
-                            width="569" height="327" loading="lazy">
+                            width="569" height="327" loading="lazy"> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="products">
+        <!-- <section id="products">
             <div class="main-div">
                 <div class="background">
                     <div class="products"></div>
@@ -280,9 +240,9 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="product-ecosystem">
+        <!-- <section id="product-ecosystem">
             <div class="main-div">
                 <div class="background">
                     <div class="product-ecosystem"></div>
@@ -333,7 +293,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <section id="dashboard_description">
             <div class="main-div">
@@ -363,7 +323,7 @@
                     </a>
                     <div class="des">
                         <h3>IoT Rule Engine</h3>
-                        <p>ThingsBoard allows you to create complex <a
+                        <p>IoTGuard allows you to create complex <a
                                 href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Rule Chains</a> to process
                             data from your devices and match your application specific use cases.</p>
                         <a class="read-more-button" href="/docs/user-guide/rule-engine-2-0/re-getting-started/">Read
@@ -389,7 +349,7 @@
                     <div class="small14"></div>
                     <div class="small15"></div>
                 </div>
-                <h3>ThingsBoard Features</h3>
+                <h3>IoTGuard Features</h3>
                 <div id="cards" class="row">
                     <div class="col-lg-6">
                         <div class="blocks">
@@ -474,95 +434,48 @@
         </section>
     </section>
 </main>
+
 <footer>
     <div class="light-text main-div">
-        <div class="newsletterSubsContainer">
-            <div id="mlb2-7341216" class="ml-subscribe-form ml-subscribe-form-7341216"
-                style="display: none; max-width: 100%;">
-                <!--            <div id="mlb2-7341216" class="ml-subscribe-form ml-subscribe-form-7341216" style="display: block;">-->
-                <div class="ml-vertical-align-center">
-                    <div class="subscribe-form ml-block-success" style="display: none;">
-                        <div class="form-section">
-                            <p>Thank you for your interest in ThingsBoard!<br>Have a great day!</p>
-                        </div>
-                    </div>
-                    <form class="ml-block-form gtm_form" id="Footer_SignUpForNewsForm"
-                        action="https://static.mailerlite.com/webforms/submit/r9r9x7" data-id="708170"
-                        data-code="r9r9x7" method="POST" target="_blank">
-                        <div class="subscribe-form horizontal">
-                            <div class="form-section horizontal">
-                                <div class="form-group ml-field-email ml-validate-required ml-validate-email">
-                                    <input type="email" name="fields[email]" class="form-control"
-                                        placeholder="Email address*" value="" autocomplete="email"
-                                        x-autocompletetype="email" spellcheck="false" autocapitalize="off"
-                                        autocorrect="off">
-                                </div>
-                            </div>
-                            <input type="hidden" name="ml-submit" value="1">
-                            <div class="form-section horizontal ml-button-position">
-                                <button id="Footer_SignUpForNews_Subscribe"
-                                    class="primary n-button price subscribe gtm_button" type="submit">
-                                    Subscribe
-                                </button>
-                                <button disabled="disabled" style="display: none;" type="button"
-                                    class="n-button loading">
-                                    <img src="https://static.mailerlite.com/images/rolling@2x.gif" width="20"
-                                        height="20" style="width: 20px; height: 20px;" alt="Loading in progress"
-                                        loading="lazy">
-                                </button>
-                            </div>
-                            <p>By subscribing you agree to receive newsletters from ThingsBoard, Inc.</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <hr>
         <div class="deeper">
             <a href="/" class="footer-logo" aria-label="Link to homepage"></a>
             <nav>
-                <a>Get Started</a>
-                <a>Documentation</a>
-                <a>Use cases</a>
-                <a>Blog</a>
-                <a>Services</a>
-                <a>Contact us</a>
+                <div class="microsoft-icons">
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/facebook.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/twitter-bird.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/instagram.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/youtube.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/linkedin.svg">
+                        </a>
+                    </button>
+                    <button>
+                        <a href="#">
+                            <img src="/assets/image/github.svg">
+                        </a>
+                    </button>
+                </div>
             </nav>
         </div>
         <div class="deepmost">
             <div class="copyright">© 2025 The IOT Guard Authors</div>
-            <div class="social">
-                <a href="https://github.com/thingsboard/thingsboard" arial-label="Link to our Github" class="github">
-                    <i class="fab fa-lg fa-github" style="color: #847989"></i>
-                </a>
-                <a href="https://www.youtube.com/thingsboard" arial-label="Link to our Youtube channel" class="youtube">
-                    <i class="fab fa-lg fa-youtube" style="color: #847989"></i>
-                </a>
-
-                <a href="https://stackoverflow.com/questions/tagged/thingsboard"
-                    arial-label="Link to our Stack Overflow page" class="stack-overflow">
-                    <i class="fab fa-lg fa-stack-overflow" style="color: #847989"></i>
-                </a>
-
-                <a href="https://www.facebook.com/thingsboard" arial-label="Link to our Facebook" class="facebook">
-                    <i class="fab fa-lg fa-facebook" style="color: #847989"></i>
-                </a>
-
-                <a href="https://www.instagram.com/thingsboard_iot/" arial-label="Link to our Instagram"
-                    class="instagram">
-                    <i class="fab fa-lg fa-instagram" style="color: #847989"></i>
-                </a>
-
-                <a href="https://www.linkedin.com/company/thingsboard/" arial-label="Link to our linkedin"
-                    class="linkedin">
-                    <i class="fab fa-lg fa-linkedin" style="color: #847989"></i>
-                </a>
-
-                <a href="https://twitter.com/thingsboard" arial-label="Link to our X" class="twitter">
-                    <img src="https://img.thingsboard.io/social-twitt-icon.svg" alt="Link to our X" width="18"
-                        height="18" loading="lazy">
-                </a>
-            </div>
         </div>
     </div>
 </footer>

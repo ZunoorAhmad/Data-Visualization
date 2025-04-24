@@ -273,3 +273,25 @@
         }
     }
 }
+
+.microsoft-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    button {
+        width: 46px;
+        height: 46px;
+
+        a {
+            filter: brightness(0) saturate(100%) invert(40%) sepia(11%) saturate(6%) hue-rotate(16deg) brightness(97%) contrast(86%);
+        }
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}

@@ -6,10 +6,10 @@
         </div>
 
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex align-items-center w-full justify-content-center gap-3">
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        <nav class="hidden md:flex align-items-center w-full justify-content-end gap-3">
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/home')">Home</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/about')">About</span>
         </nav>
 
         <!-- Mobile menu button -->
@@ -22,9 +22,9 @@
 
     <!-- Mobile Nav -->
     <div *ngIf="menuOpen" class="md:hidden flex flex-column gap-3 mt-4 px-4">
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/home')">Home</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600" (click)="global.goToPage('/teacher/about')">About</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/home')">Home</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/about')">About</span>
     </div>
 </div>
 
@@ -34,12 +34,12 @@
             <h4>IoTGuard Real-Time IoT Security
                 Platform engineered to protect your connected ecosystem.</h4>
             <div class="about-top-thrid-div">
-                <p>Our ready-to-go connexion infrastructure allows to Advanced threat
+                <p class="text-lg">Our ready-to-go connexion infrastructure allows to Advanced threat
                     detection, ML-driven security analytics, and automated risk mitigation for your IoT environment.</p>
             </div>
             <div class="about-top-four-div">
                 <a href="#" class="">
-                    <span>Contact Us</span>
+                    <span class="text-xl">Contact Us</span>
                 </a>
             </div>
         </div>
@@ -47,109 +47,58 @@
 </section>
 <section class="about-map-section">
     <div class="">
-        <img src="/assets/image/google-img.png" alt="">
+        <img src="/assets/image/ucp-location.png" alt="">
     </div>
 </section>
 <section class="about-bootom-section">
     <h6>Location</h6>
     <div class="microsoft-teams-img">
-        <img src="/assets/image/MicrosoftTeams-image.png" alt="">
+        <img src="/assets/image/ucp-logo.png" alt="">
     </div>
     <div class="microsoft-text-p">
-        <p>C/Jacinto Benavente, 2A. Planta 1ª</p>
-        <p>Edificio Tripark. 28232 – Las Rozas de Madrid</p>
-    </div>
-    <div class="microsoft-icons">
-        <button>
-            <a href="#">
-                <img src="/assets/image/facebook.svg">
-            </a>
-        </button>
-        <button>
-            <a href="#">
-                <img src="/assets/image/twitter-bird.svg">
-            </a>
-        </button>
-        <button>
-            <a href="#">
-                <img src="/assets/image/instagram.svg">
-            </a>
-        </button>
-        <button>
-            <a href="#">
-                <img src="/assets/image/youtube.svg">
-            </a>
-        </button>
-        <button>
-            <a href="#">
-                <img src="/assets/image/linkedin.svg">
-            </a>
-        </button>
-        <button>
-            <a href="#">
-                <img src="/assets/image/github.svg">
-            </a>
-        </button>
+        <p>Avenue 1 Khayaban-e-Jinnah, Pir Mansur Johar Town, Lahore</p>
     </div>
 </section>
 <section class="footer-section">
-    <div class="grid grid-nogutter footer-main-div">
-        <div class="col-3 first-col-div">
-            <div class="footer-content first-div">
-                <p>Copyright © 2024</p>
-                <p>IOT</p>
-                <div class="thinger-div">
-                    <img src="/assets/image/thinger_logo_white.svg">
-                </div>
-                <div class="cdti-div">
-                    <img src="/assets/image/cdti.png" alt="">
-                </div>
+    <div class="light-text main-div">
+        <hr>
+        <div class="deeper">
+            <a href="/" class="footer-logo" aria-label="Link to homepage"></a>
+            <div class="microsoft-icons">
+                <button>
+                    <a href="#">
+                        <img src="/assets/image/facebook.svg">
+                    </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <img src="/assets/image/twitter-bird.svg">
+                    </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <img src="/assets/image/instagram.svg">
+                    </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <img src="/assets/image/youtube.svg">
+                    </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <img src="/assets/image/linkedin.svg">
+                    </a>
+                </button>
+                <button>
+                    <a href="#">
+                        <img src="/assets/image/github.svg">
+                    </a>
+                </button>
             </div>
         </div>
-        <div class="col-3 second-col-div">
-            <div class="footer-content">
-                <div class="footer-heading">
-                    <h2>About Us</h2>
-                </div>
-                <div class="footer-content-text-p">
-                    <p>
-                        <a href="#">Company</a>
-                    </p>
-                    <p>
-                        <a href="#">Android App</a>
-                    </p>
-                    <p>
-                        <a href="#">iOS App</a>
-                    </p>
-                    <p>
-                        <a href="#">Cloud</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-3 third-col-div">
-            <div class="footer-content">
-                <div class="footer-heading">
-                    <h2>Follow Us</h2>
-                </div>
-                <div class="footer-content-icons">
-                    <button class="footer-icons">
-                        <img src="/assets/image/facebook.svg" alt="">
-                    </button>
-                    <button class="footer-icons">
-                        <img src="/assets/image/twitter-bird.svg" alt="">
-                    </button>
-                    <button class="footer-icons">
-                        <img src="/assets/image/instagram.svg" alt="">
-                    </button>
-                    <button class="footer-icons">
-                        <img src="/assets/image/linkedin.svg" alt="">
-                    </button>
-                    <button class="footer-icons">
-                        <img src="/assets/image/discord.svg" alt="">
-                    </button>
-                </div>
-            </div>
+        <div class="deepmost">
+            <div class="copyright">© 2025 The IOT Guard Authors</div>
         </div>
     </div>
 </section>
