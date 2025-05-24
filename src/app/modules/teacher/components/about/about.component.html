@@ -7,9 +7,12 @@
 
         <!-- Desktop Nav -->
         <nav class="hidden md:flex align-items-center w-full justify-content-end gap-3">
-            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/home')">Home</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/about')">About</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/home')">Home</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+            <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+                (click)="global.goToPage('/teacher/about')">About</span>
         </nav>
 
         <!-- Mobile menu button -->
@@ -22,9 +25,12 @@
 
     <!-- Mobile Nav -->
     <div *ngIf="menuOpen" class="md:hidden flex flex-column gap-3 mt-4 px-4">
-        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/home')">Home</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
-        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer" (click)="global.goToPage('/teacher/about')">About</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/home')">Home</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/dashboard')">Dashboard</span>
+        <span class="text-2xl text-gray-700 hover:text-blue-600 cursor-pointer"
+            (click)="global.goToPage('/teacher/about')">About</span>
     </div>
 </div>
 
@@ -37,6 +43,11 @@
                 <p class="text-lg">Our ready-to-go connexion infrastructure allows to Advanced threat
                     detection, ML-driven security analytics, and automated risk mitigation for your IoT environment.</p>
             </div>
+            <section class="about-map-section">
+                <div class="">
+                    <img src="/assets/image/about-us.jpg" alt="">
+                </div>
+            </section>
             <div class="about-top-four-div">
                 <a href="#" class="">
                     <span class="text-xl">Contact Us</span>

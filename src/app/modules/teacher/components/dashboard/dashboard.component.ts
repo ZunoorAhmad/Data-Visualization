@@ -26,8 +26,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
     selectedFile: File | null = null;
     selectedFileName: string = '';
+    loading: boolean = false;
     rocCurveImage: SafeUrl | null = null; // To store the ROC curve image
     accuracyPlotImage: SafeUrl | null = null; // To store the accuracy plot image
+    confusion_matrix_image: SafeUrl | null = null; // To store the accuracy plot image
     showDefaultImages: boolean = true; // Flag to toggle between default and backend images
 
     // Trigger file input click
@@ -63,7 +65,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
         const formData = new FormData();
         formData.append('file', this.selectedFile, this.selectedFileName);
-
+        this.loading = true;
         try {
             const response: any = await this.httpService.post(environment.apiUrl + 'api/upload/', formData);
             console.log('File uploaded successfully:', response);
@@ -76,6 +78,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
             if (response.accuracy_plot_image) {
                 this.accuracyPlotImage = this.sanitizer.bypassSecurityTrustUrl(`${response.accuracy_plot_image}`);
             }
+            if (response.confusion_matrix_image) {
+                this.confusion_matrix_image = this.sanitizer.bypassSecurityTrustUrl(`${response.confusion_matrix_image}`);
+            }
 
             // Hide default images and show backend images
             this.showDefaultImages = false;
@@ -84,6 +89,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         } catch (error) {
             console.error('Error uploading file:', error);
             alert('Failed to upload file. Please try again.');
+        } finally {
+            this.loading = false;
         }
     }
 
