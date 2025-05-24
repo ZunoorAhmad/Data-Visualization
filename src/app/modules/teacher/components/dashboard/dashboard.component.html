@@ -46,11 +46,11 @@
         <div class="metrics-grid flex align-items-center flex-wrap md:gap-0 gap-3">
             <div class="metric-card text-center sm:w-3 w-full">
                 <button type="button" (click)="triggerFileInput()">Upload</button>
-                <input type="file" #fileInput (change)="onFileSelected($event)" style="display: none" />
+                <input type="file" #fileInput (change)="onFileSelected($event)" accept=".csv,text/csv" style="display: none" />
                 <span *ngIf="selectedFileName">{{ selectedFileName }}</span>
             </div>
             <div class="metric-card text-center sm:w-3 w-full">
-                <button type="button" (click)="clearFile()" class="btn btn-danger">Submit</button>
+                <button type="button" (click)="submitFile()" class="btn btn-danger">Submit</button>
             </div>
             <div class="metric-card text-center sm:w-3 w-full">
                 <button type="button" class="btn btn-primary">Remove</button>
@@ -74,11 +74,14 @@
                     <img src="/assets/image/RF Accuracy.png">
                 </div>
             </div>
+            <!-- Conditionally render default or backend images -->
             <div class="md:col-6 col-12 charts-section-col">
-                <img src="/assets/image/Model Accuracy over Epoch.png">
+                <img *ngIf="showDefaultImages" src="/assets/image/Model Accuracy over Epoch.png">
+                <img *ngIf="!showDefaultImages && accuracyPlotImage" [src]="accuracyPlotImage">
             </div>
             <div class="md:col-6 col-12 charts-section-col">
-                <img src="/assets/image/Multiclass ROC.jpg">
+                <img *ngIf="showDefaultImages" src="/assets/image/Multiclass ROC.jpg">
+                <img *ngIf="!showDefaultImages && rocCurveImage" [src]="rocCurveImage">
             </div>
         </div>
         <!-- <div class="charts-section">

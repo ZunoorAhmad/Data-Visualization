@@ -2,6 +2,9 @@ import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angula
 import { Chart, registerables } from 'chart.js';
 import { GlobalService } from 'src/app/services/global.service';
 import { DetailModalComponent } from '../detail-modal/detail-modal.component';
+import { HttpService } from 'src/app/services/http.service';
+import { environment } from 'src/environments/environment';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 Chart.register(...registerables);
 
@@ -11,31 +14,87 @@ Chart.register(...registerables);
     styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit, AfterViewInit {
-    constructor(public global: GlobalService) { }
+    constructor(public global: GlobalService,
+        private httpService: HttpService,
+        private sanitizer: DomSanitizer
+    ) { }
 
     menuOpen = false;
 
     toggleMenu() {
-      this.menuOpen = !this.menuOpen;
+        this.menuOpen = !this.menuOpen;
+    }
+    selectedFile: File | null = null;
+    selectedFileName: string = '';
+    rocCurveImage: SafeUrl | null = null; // To store the ROC curve image
+    accuracyPlotImage: SafeUrl | null = null; // To store the accuracy plot image
+    showDefaultImages: boolean = true; // Flag to toggle between default and backend images
+
+    // Trigger file input click
+    triggerFileInput(): void {
+        const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+        fileInput.click();
     }
 
-    @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
-    selectedFileName: string | null = null;
-
-    triggerFileInput() {
-        this.fileInput.nativeElement.click();
-    }
-
-    onFileSelected(event: Event) {
+    // Handle file selection
+    onFileSelected(event: Event): void {
         const input = event.target as HTMLInputElement;
         if (input.files && input.files.length > 0) {
-            this.selectedFileName = input.files[0].name;
+            const file = input.files[0];
+            const fileExtension = file.name.split('.').pop()?.toLowerCase();
+            if (fileExtension !== 'csv') {
+                alert('Please select a valid .csv file.');
+                input.value = ''; // Clear the input
+                this.selectedFileName = '';
+                this.selectedFile = null;
+                return;
+            }
+            this.selectedFile = file;
+            this.selectedFileName = file.name;
         }
     }
 
-    clearFile() {
-        this.selectedFileName = null;
-        this.fileInput.nativeElement.value = ''; // Reset the input
+    // Handle file submission
+    async submitFile(): Promise<void> {
+        if (!this.selectedFile) {
+            alert('No file selected. Please upload a file first.');
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('file', this.selectedFile, this.selectedFileName);
+
+        try {
+            const response: any = await this.httpService.post(environment.apiUrl + 'api/upload/', formData);
+            console.log('File uploaded successfully:', response);
+            alert('File uploaded successfully!');
+
+            // Extract and sanitize the base64 images from the response
+            if (response.roc_curve_image) {
+                this.rocCurveImage = this.sanitizer.bypassSecurityTrustUrl(`${response.roc_curve_image}`);
+            }
+            if (response.accuracy_plot_image) {
+                this.accuracyPlotImage = this.sanitizer.bypassSecurityTrustUrl(`${response.accuracy_plot_image}`);
+            }
+
+            // Hide default images and show backend images
+            this.showDefaultImages = false;
+
+            this.clearFile(); // Clear the file after successful upload
+        } catch (error) {
+            console.error('Error uploading file:', error);
+            alert('Failed to upload file. Please try again.');
+        }
+    }
+
+    // Clear selected file
+    clearFile(): void {
+        this.selectedFile = null;
+        this.selectedFileName = '';
+        const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+        if (fileInput) {
+            fileInput.value = '';
+        }
     }
 
     ngOnInit() {
