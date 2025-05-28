@@ -98,7 +98,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     handleDownloadClick() {
         console.log("Download file working");
-        // this.httpService.post(environment.apiUrl + 'api/upload/', formData);
+        this.httpService.post(environment.apiUrl + 'api/generate-pdf/', {});
     }
 
     // Clear selected file
