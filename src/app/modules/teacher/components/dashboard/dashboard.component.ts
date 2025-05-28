@@ -18,9 +18,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         private httpService: HttpService,
         private sanitizer: DomSanitizer
     ) { }
-
     menuOpen = false;
-
     toggleMenu() {
         this.menuOpen = !this.menuOpen;
     }
@@ -31,7 +29,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     accuracyPlotImage: SafeUrl | null = null; // To store the accuracy plot image
     confusion_matrix_image: SafeUrl | null = null; // To store the accuracy plot image
     showDefaultImages: boolean = true; // Flag to toggle between default and backend images
-
+    currentImage: string = "";
     // Trigger file input click
     triggerFileInput(): void {
         const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
@@ -94,6 +92,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         }
     }
 
+    handleDownloadClick() {
+        console.log("Download file working");
+    }
+
     // Clear selected file
     clearFile(): void {
         this.selectedFile = null;
@@ -114,9 +116,10 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.initUsageByDeviceChart();
     }
 
-    openModal() {
+    setCurrentImage(imageBase64: any) {
         console.log("Open modal working");
         this.displayModal = true;
+        this.currentImage = imageBase64;
     }
 
     displayModal: boolean = false;

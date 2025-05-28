@@ -54,10 +54,10 @@
                 <button type="button" (click)="submitFile()" class="btn btn-danger">Submit</button>
             </div>
             <div class="metric-card text-center sm:w-3 w-full">
-                <button type="button" class="btn btn-primary">Remove</button>
+                <button type="button" (click)="clearFile()" class="btn btn-primary">Remove</button>
             </div>
             <div class="metric-card text-center sm:w-3 w-full">
-                <button type="button" (click)="openModal()" class="btn btn-dark">Download</button>
+                <button type="button" (click)="handleDownloadClick()" class="btn btn-dark">Download</button>
             </div>
         </div>
 
@@ -84,56 +84,19 @@
             <!-- Conditionally render default or backend images -->
             <div class="md:col-6 col-12 charts-section-col">
                 <img *ngIf="showDefaultImages" src="/assets/image/Model Accuracy over Epoch.png">
-                <img *ngIf="!showDefaultImages && accuracyPlotImage" [src]="accuracyPlotImage">
+                <img (click)="setCurrentImage(accuracyPlotImage)" *ngIf="!showDefaultImages && accuracyPlotImage"
+                    [src]="accuracyPlotImage">
             </div>
             <div class="md:col-6 col-12 charts-section-col">
                 <img *ngIf="showDefaultImages" src="/assets/image/Multiclass ROC.jpg">
-                <img *ngIf="!showDefaultImages && rocCurveImage" [src]="rocCurveImage">
+                <img (click)="setCurrentImage(rocCurveImage)" *ngIf="!showDefaultImages && rocCurveImage"
+                    [src]="rocCurveImage">
             </div>
             <div class="md:col-6 col-12 charts-section-col">
-                <img *ngIf="!showDefaultImages && confusion_matrix_image" [src]="confusion_matrix_image">
+                <img (click)="setCurrentImage(confusion_matrix_image)"
+                    *ngIf="!showDefaultImages && confusion_matrix_image" [src]="confusion_matrix_image">
             </div>
         </div>
-        <!-- <div class="charts-section">
-            <div class="temperature-chart">
-                <div class="chart-header">
-                    <h2>Average office temperature</h2>
-                    <div class="chart-controls">
-                        <div class="date-range">10-10-2022 - 10-10-2022</div>
-                        <button class="filter-btn">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
-                            </svg>
-                            Filtr
-                        </button>
-                        <button class="more-btn">•••</button>
-                    </div>
-                </div>
-                <canvas id="temperatureChart"></canvas>
-                <div class="chart-legend">
-                    <div class="legend-item">
-                        <span class="legend-line blue"></span>
-                        Average normal temperature according to the office requirements
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-line gray"></span>
-                        Current temperature
-                    </div>
-                </div>
-            </div>
-
-            <div class="usage-charts">
-                <div class="pie-chart">
-                    <h2>Electricity usage by days</h2>
-                    <canvas id="usageByDaysChart"></canvas>
-                </div>
-
-                <div class="bar-chart">
-                    <h2>Electricity usage by device</h2>
-                    <canvas id="usageByDeviceChart"></canvas>
-                </div>
-            </div>
-        </div> -->
     </div>
 </div>
 
@@ -141,7 +104,7 @@
     class="Guard-Dashboard">
     <div class="modal-content">
         <div class="image-container">
-            <img src="/assets/image/confusion-marix.jpg" alt="Modal Image" class="modal-image">
+            <img src="{{currentImage}}" alt="Modal Image" class="modal-image">
         </div>
         <div class="text-inputs">
             <div class="field">
