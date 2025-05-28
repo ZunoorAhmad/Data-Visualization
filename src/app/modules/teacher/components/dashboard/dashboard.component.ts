@@ -98,6 +98,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     handleDownloadClick() {
         console.log("Download file working");
+        // this.httpService.post(environment.apiUrl + 'api/upload/', formData);
     }
 
     // Clear selected file
@@ -121,9 +122,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
 
     setCurrentImage(imageBase64: any) {
-        console.log("Open modal working");
-        this.displayModal = true;
         this.currentImage = imageBase64;
+        console.log("Open modal working", this.currentImage);
+        this.displayModal = true;
     }
 
     displayModal: boolean = false;
