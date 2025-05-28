@@ -28,6 +28,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     rocCurveImage: SafeUrl | null = null; // To store the ROC curve image
     accuracyPlotImage: SafeUrl | null = null; // To store the accuracy plot image
     confusion_matrix_image: SafeUrl | null = null; // To store the accuracy plot image
+    accuracy_plot_image: SafeUrl | null = null; // To store the accuracy plot image
     showDefaultImages: boolean = true; // Flag to toggle between default and backend images
     currentImage: string = "";
     // Trigger file input click
@@ -78,6 +79,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
             }
             if (response.confusion_matrix_image) {
                 this.confusion_matrix_image = this.sanitizer.bypassSecurityTrustUrl(`${response.confusion_matrix_image}`);
+            }
+            if (response.accuracy_plot_image) {
+                this.accuracy_plot_image = this.sanitizer.bypassSecurityTrustUrl(`${response.accuracy_plot_image}`);
             }
 
             // Hide default images and show backend images

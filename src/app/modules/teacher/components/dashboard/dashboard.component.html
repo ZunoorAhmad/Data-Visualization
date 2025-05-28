@@ -96,6 +96,10 @@
                 <img (click)="setCurrentImage(confusion_matrix_image)"
                     *ngIf="!showDefaultImages && confusion_matrix_image" [src]="confusion_matrix_image">
             </div>
+            <div class="md:col-6 col-12 charts-section-col">
+                <img (click)="setCurrentImage(accuracy_plot_image)"
+                    *ngIf="!showDefaultImages && accuracy_plot_image" [src]="accuracy_plot_image">
+            </div>
         </div>
     </div>
 </div>
