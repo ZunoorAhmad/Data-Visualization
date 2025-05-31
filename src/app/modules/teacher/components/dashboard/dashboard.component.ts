@@ -31,6 +31,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     confusion_matrix_xgb_image: SafeUrl | null = null; // To store the accuracy plot image
     showDefaultImages: boolean = true; // Flag to toggle between default and backend images
     currentImage: string = "";
+    response: any;
     // Trigger file input click
     triggerFileInput(): void {
         const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
@@ -67,6 +68,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         this.loading = true;
         try {
             const response: any = await this.httpService.post(environment.apiUrl + 'api/upload/', formData);
+            let responseToPass = response;
             console.log('File uploaded successfully:', response);
             alert('File uploaded successfully!');
 
@@ -84,6 +86,11 @@ export class DashboardComponent implements OnInit, AfterViewInit {
                 this.confusion_matrix_xgb_image = this.sanitizer.bypassSecurityTrustUrl(`${response.confusion_matrix_xgb_image}`);
             }
 
+            responseToPass.roc_curve_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
+            responseToPass.accuracy_plot_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
+            responseToPass.confusion_matrix_rf_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
+            responseToPass.confusion_matrix_xgb_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
+            this.response = responseToPass;
             // Hide default images and show backend images
             this.showDefaultImages = false;
 
@@ -98,7 +105,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
 
     handleDownloadClick() {
         console.log("Download file working");
-        this.httpService.post(environment.apiUrl + 'api/generate-pdf/', {});
+        this.httpService.post(environment.apiUrl + 'api/generate-pdf/', this.response);
     }
 
     // Clear selected file
