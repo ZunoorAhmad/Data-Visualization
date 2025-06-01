@@ -65,17 +65,63 @@
             <div class="spinner"></div>
             <p>Processing your file, please wait...</p>
         </div>
+        <div *ngIf="!showDefaultImages" class="table-container">
+            <h3 class="table-header">Random Forest Classification Report:</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th>Precision</th>
+                        <th>Recall</th>
+                        <th>F1-Score</th>
+                        <th>Support</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of parsedReport">
+                        <td>{{ row.label }}</td>
+                        <td>{{ row.precision }}</td>
+                        <td>{{ row.recall }}</td>
+                        <td>{{ row.f1 }}</td>
+                        <td>{{ row.support }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div *ngIf="!showDefaultImages" class="table-container">
+                <h3 class="table-header">XG-Boost Classification Report:</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Label</th>
+                        <th>Precision</th>
+                        <th>Recall</th>
+                        <th>F1-Score</th>
+                        <th>Support</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let row of parsedReport2">
+                        <td>{{ row.label }}</td>
+                        <td>{{ row.precision }}</td>
+                        <td>{{ row.recall }}</td>
+                        <td>{{ row.f1 }}</td>
+                        <td>{{ row.support }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
 
         <!-- Charts Section -->
         <div class="grid grid-nogutter charts-section-div">
-            <div class="md:col-6 col-12 charts-section-col">
+            <div *ngIf="showDefaultImages" class="md:col-6 col-12 charts-section-col">
                 <div class="flex chart-section-second">
                     <img src="/assets/image/XG Confusion Matrix.png">
                     <img src="/assets/image/RF Confusion Matrix.png">
                 </div>
             </div>
-            <div class="md:col-6 col-12 charts-section-col">
+            <div *ngIf="showDefaultImages" class="md:col-6 col-12 charts-section-col">
                 <div class="flex chart-section-second">
                     <img src="/assets/image/XG Accuracy.png">
                     <img src="/assets/image/RF Accuracy.png">

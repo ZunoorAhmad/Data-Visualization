@@ -32,6 +32,8 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     showDefaultImages: boolean = true; // Flag to toggle between default and backend images
     currentImage: string = "";
     response: any;
+    parsedReport: any[] = [];
+    parsedReport2: any[] = [];
     // Trigger file input click
     triggerFileInput(): void {
         const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
@@ -71,6 +73,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
             let responseToPass = response;
             console.log('File uploaded successfully:', response);
             alert('File uploaded successfully!');
+            this.parsedReport = this.parseReport(response.report_rf_str);
+            this.parsedReport2 = this.parseReport(response.report_xgb_str);
+
 
             // Extract and sanitize the base64 images from the response
             if (response.roc_curve_image) {
@@ -87,9 +92,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
             }
 
             responseToPass.roc_curve_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
-            responseToPass.accuracy_plot_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
-            responseToPass.confusion_matrix_rf_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
-            responseToPass.confusion_matrix_xgb_image = response.roc_curve_image.replace(/^data:image\/png;base64,/, '');
+            responseToPass.accuracy_plot_image = response.accuracy_plot_image.replace(/^data:image\/png;base64,/, '');
+            responseToPass.confusion_matrix_rf_image = response.confusion_matrix_rf_image.replace(/^data:image\/png;base64,/, '');
+            responseToPass.confusion_matrix_xgb_image = response.confusion_matrix_xgb_image.replace(/^data:image\/png;base64,/, '');
             this.response = responseToPass;
             // Hide default images and show backend images
             this.showDefaultImages = false;
@@ -101,11 +106,33 @@ export class DashboardComponent implements OnInit, AfterViewInit {
         } finally {
             this.loading = false;
         }
+    }   
+
+    parseReport(report: string): any[] {
+    const lines = report.trim().split('\n');
+    const parsed: any[] = [];
+
+    for (let line of lines) {
+      if (line.trim().startsWith('accuracy')) break;
+
+      const parts = line.trim().split(/\s+/);
+      if (parts.length >= 5) {
+        const label = parts.slice(0, parts.length - 4).join(' ');
+        const [precision, recall, f1, support] = parts.slice(-4);
+        parsed.push({ label, precision, recall, f1, support });
+      }
     }
+
+    return parsed;
+  }
+
 
     handleDownloadClick() {
         console.log("Download file working");
-        this.httpService.post(environment.apiUrl + 'api/generate-pdf/', this.response);
+        this.httpService.post(environment.apiUrl + 'api/generate-pdf/', this.response).then((res:any)=>{
+                const fileUrl = environment.apiUrl + res.pdf_url;
+                window.open(fileUrl)
+        });
     }
 
     // Clear selected file
@@ -129,7 +156,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     }
 
     setCurrentImage(imageBase64: any) {
-        this.currentImage = imageBase64;
+        this.currentImage = imageBase64.changingThisBreaksApplicationSecurity;
         console.log("Open modal working", this.currentImage);
         this.displayModal = true;
     }
